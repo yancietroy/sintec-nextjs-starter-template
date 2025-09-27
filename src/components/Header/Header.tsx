@@ -13,15 +13,17 @@ const Header = (props: Props) => {
   const stickyRef = useRef<HTMLDivElement>(null);
 
   useVerticalScrollEvent((evt:any) => {
+    if (!stickyRef.current) return;
+
     if(evt.currentTarget.scrollY >= 172) {
-      (stickyRef.current as HTMLDivElement).classList.add('navbar_fixed');
-      return;
-    } 
-    if(evt.currentTarget.scrollY <= 42) {
-      (stickyRef.current as HTMLDivElement).classList.remove('navbar_fixed');
+      stickyRef.current.classList.add('navbar_fixed');
       return;
     }
-    
+    if(evt.currentTarget.scrollY <= 42) {
+      stickyRef.current.classList.remove('navbar_fixed');
+      return;
+    }
+
   });
 
   

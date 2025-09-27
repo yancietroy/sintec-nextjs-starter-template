@@ -17,7 +17,7 @@ export default function ServicesPage() {
       <PageHeader title="Our Services" navTitle="Services" />
       <Services />
       <Stats />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Footer />
     </>
   )

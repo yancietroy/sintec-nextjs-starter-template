@@ -53,7 +53,7 @@ const ContactUs = (props: Props) => {
       <div className="container">
         <div className="d-none d-sm-block mb-5 pb-4">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23833.85716245098!2d-73.95454906767618!3d41.69392397071829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89dd3e642be0bb3b%3A0x5ea85debfb20f349!2sPoughkeepsie%2C%20NY%2C%20USA!5e0!3m2!1sen!2sph!4v1681066121731!5m2!1sen!2sph"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2571.8434727883!2d-97.2019435!3d49.8954327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ea73fa4b2d6d3b%3A0x8f8f8f8f8f8f8f8f!2sR3G%202H5%2C%20Winnipeg%2C%20MB%2C%20Canada!5e0!3m2!1sen!2sca!4v1735378800000!5m2!1sen!2sca"
             width="100%"
             height="450"
             style={{ border: 0 }}
@@ -147,8 +147,8 @@ const ContactUs = (props: Props) => {
                 <i className="ti-home"></i>
               </span>
               <div className="media-body">
-                <h3>Buttonwood, California.</h3>
-                <p>Rosemead, CA 91770</p>
+                <h3>Winnipeg, Manitoba</h3>
+                <p>R3G 2H5, Canada</p>
               </div>
             </div>
             <div className="media contact-info">
@@ -157,9 +157,9 @@ const ContactUs = (props: Props) => {
               </span>
               <div className="media-body">
                 <h3>
-                  <a href="tel:454545654">00 (440) 9865 562</a>
+                  <a href="tel:+12042028257">+1-204 202 8257</a>
                 </h3>
-                <p>Mon to Fri 9am to 6pm</p>
+                <p>9 am - 5 pm Flexible Scheduling</p>
               </div>
             </div>
             <div className="media contact-info">
@@ -168,16 +168,11 @@ const ContactUs = (props: Props) => {
               </span>
               <div className="media-body">
                 <h3>
-                  <a href="/cdn-cgi/l/email-protection#c9babcb9b9a6bbbd89aaa6a5a6bba5a0abe7aaa6a4">
-                    <span
-                      className="__cf_email__"
-                      data-cfemail="89fafcf9f9e6fbfdc9eae6e5e6fbe5e0eba7eae6e4"
-                    >
-                      [email&#160;protected]
-                    </span>
+                  <a href="mailto:admin@spongeprocleaningservices.com">
+                    admin@spongeprocleaningservices.com
                   </a>
                 </h3>
-                <p>Send us your query anytime!</p>
+                <p>Convenient and flexible scheduling options to fit the busy lifestyles of our clients.</p>
               </div>
             </div>
           </div>

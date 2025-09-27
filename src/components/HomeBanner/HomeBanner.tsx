@@ -20,7 +20,6 @@ const HomeBanner = (props: Props) => {
       >
         <div className="container">
           <div className="banner_content text-center">
-            <span>Professional Cleaning Services</span>
             <h3>
               Keep your space spotless
               <br />

@@ -9,29 +9,25 @@ const Footer = (props: Props) => {
           <div className="row">
             <div className="col-lg-4  col-md-6">
               <div className="single-footer-widget">
-                <h6>Userful Links</h6>
+                <h6>Quick Links</h6>
                 <div className="row">
                   <div className="col-lg-6">
                     <ul className="footer-nav">
                       <li>
                         <i className="ti-angle-right"></i>
-                        <a href="#">home</a>
+                        <a href="/">Home</a>
                       </li>
                       <li>
                         <i className="ti-angle-right"></i>
-                        <a href="#">about us</a>
+                        <a href="/about-us">About Us</a>
                       </li>
                       <li>
                         <i className="ti-angle-right"></i>
-                        <a href="#">company news</a>
+                        <a href="/services">Our Services</a>
                       </li>
                       <li>
                         <i className="ti-angle-right"></i>
-                        <a href="#">projects</a>
-                      </li>
-                      <li>
-                        <i className="ti-angle-right"></i>
-                        <a href="#">careers</a>
+                        <a href="/contact">Contact Us</a>
                       </li>
                     </ul>
                   </div>
@@ -39,19 +35,19 @@ const Footer = (props: Props) => {
                     <ul className="footer-nav">
                       <li>
                         <i className="ti-angle-right"></i>
-                        <a href="#">our services</a>
+                        <a href="#">Standard Cleaning</a>
                       </li>
                       <li>
                         <i className="ti-angle-right"></i>
-                        <a href="#">terms and condition</a>
+                        <a href="#">Move-In/Move-Out</a>
                       </li>
                       <li>
                         <i className="ti-angle-right"></i>
-                        <a href="#">shop</a>
+                        <a href="#">Custom Plans</a>
                       </li>
                       <li>
                         <i className="ti-angle-right"></i>
-                        <a href="#">contuct us</a>
+                        <a href="/privacy-policy">Privacy Policy</a>
                       </li>
                     </ul>
                   </div>
@@ -63,16 +59,13 @@ const Footer = (props: Props) => {
                 <h6 className="mb-20">Business Hours</h6>
                 <ul className="business-hour">
                   <li>
-                    Monday - Friday : <span>9:00 am - 18:00 pm</span>{" "}
+                    Monday - Friday : <span>9 am - 5 pm</span>{" "}
                   </li>
                   <li>
-                    Saturday :<span>9:00 am - 16:00 pm</span>
-                  </li>
-                  <li>
-                    Sunday :<span>Closed</span>
+                    Saturday - Sunday :<span>Flexible Scheduling</span>
                   </li>
                 </ul>
-                <p>We work all the holidays!</p>
+                <p>Convenient and flexible scheduling options to fit the busy lifestyles of our clients.</p>
               </div>
             </div>
             <div className="col-lg-4  col-md-12">
@@ -105,10 +98,10 @@ const Footer = (props: Props) => {
                   </form>
                 </div>
                 <p>
-                  Sign up for new Recover Construction Company content, updates,
-                  surveys & offers.
+                  Sign up for cleaning tips, special offers, and updates from
+                  Sponge Pro Cleaning Services.
                 </p>
-                <a className="footer-link" href="#">
+                <a className="footer-link" href="/privacy-policy">
                   privacy policy
                 </a>
               </div>
@@ -119,13 +112,7 @@ const Footer = (props: Props) => {
           <div className="container">
             <div className="row ">
               <p className="col-lg-12 footer-text ">
-                Copyright &copy;
-                2023 All
-                rights reserved | This template is made with{" "}
-                <i className="fa fa-heart" aria-hidden="true"></i> by{" "}
-                <a href="https://colorlib.com" target="_blank">
-                  Colorlib
-                </a>
+                Copyright &copy; 2025 Sponge Pro Cleaning Services. All rights reserved.
               </p>
             </div>
           </div>

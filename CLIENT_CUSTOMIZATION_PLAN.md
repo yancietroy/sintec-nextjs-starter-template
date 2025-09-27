@@ -123,6 +123,19 @@ Phased approach to customize the Sintec template with client's content, branding
 - [ ] Testimonials/reviews
 - [ ] Business hours
 
+### Statistics for Homepage (Currently Hidden):
+- [ ] Number of projects/cleanings completed
+- [ ] Number of happy clients/customers
+- [ ] Years in business/experience
+- [ ] Awards or certifications won
+- [ ] Any other impressive numbers
+
+### Customer Reviews Section (Currently Hidden):
+- [ ] Real customer testimonials with names
+- [ ] Customer photos (if willing to share)
+- [ ] Specific reviews about their cleaning services
+- [ ] Permission to use customer names/photos
+
 ### Branding Info:
 - [ ] Brand colors (hex codes)
 - [ ] Font preferences

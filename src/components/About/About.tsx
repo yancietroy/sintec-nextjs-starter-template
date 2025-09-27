@@ -16,19 +16,16 @@ const About = (props: Props) => {
             <div className="col-lg-6">
               <div className="about-content">
                 <h4>
-                  WE ARE ON EXPERT <br />
-                  THIS FIELD BUILDINGS
+                  PREMIER HOME CLEANING <br />
+                  COMPANY DEDICATED TO
                   <br />
-                  SOLUTIONS SINCE 1974.
+                  TOP-QUALITY SOLUTIONS.
                 </h4>
                 <p>
-                  Void gathering midst together you{`'`}re shall. Beast set he{" "}
-                  <br />
-                  likeness spirit winged two all fourth they{`'`}re gathered
-                  <br /> seasons very may heaven saying. Fly image th
+                  Sponge Pro Cleaning Services is a premier home cleaning company dedicated to providing top-quality cleaning solutions tailored to meet the unique needs of each client. Our mission is to create spotless, comfortable, and hygienic living spaces, ensuring that our customers can enjoy the tranquility and peace of mind that comes with a clean home.
                 </p>
-                <a className="main_btn" href="#">
-                  learn more
+                <a className="main_btn" href="/services">
+                  Our Services
                 </a>
               </div>
             </div>

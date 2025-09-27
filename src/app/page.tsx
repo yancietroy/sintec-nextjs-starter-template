@@ -22,17 +22,8 @@ export default function HomePage() {
       <About />
       <Services />
 
-      {/* React 19 Async Server Component with Suspense */}
-      <SuspenseWrapper fallback={
-        <div style={{ padding: '60px 0', textAlign: 'center' }}>
-          <p>Loading statistics...</p>
-        </div>
-      }>
-        <AsyncStatsCounter />
-      </SuspenseWrapper>
-
       <Stats />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Footer />
     </>
   )

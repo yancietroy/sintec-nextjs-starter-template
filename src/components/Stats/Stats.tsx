@@ -18,15 +18,12 @@ const Stats = (props: Props) => {
           <div className="number-content">
             <h4>
               Providing Personalized And <br />
-              High Quality Service .
+              High Quality Service
             </h4>
             <p>
-              Grass bearing make open multiply that may fly cattle gathering
-              be unto
-              <br /> void moving. Blessed one evening had them heaven
-              <br /> divide said heaven whose brought he. Give It fowl
-              green.
+              At Sponge Pro Cleaning Services, we understand that every home and office is unique. That's why we provide personalized cleaning solutions tailored to your specific needs, ensuring exceptional results every time.
             </p>
+            {/* Stats will be added when client provides actual data
             <div className="number-wrapper">
               <div className="single-number">
                 <h5>
@@ -48,6 +45,7 @@ const Stats = (props: Props) => {
                 <p>Average Rating</p>
               </div>
             </div>
+            */}
           </div>
         </div>
       </div>

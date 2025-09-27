@@ -15,7 +15,7 @@ export default function AboutPage() {
       <Header />
       <PageHeader />
       <About />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Footer />
     </>
   )
