@@ -10,8 +10,8 @@ const MainMenu = (props: Props) => {
     <div className="main_menu">
     <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container">
-        <Link className="navbar-brand logo_h" href="/">
-          <Image src="/images/logo.png.webp" alt="" width={165} height={80} />
+        <Link className="navbar-brand logo_h" href="/" style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#1e3a8a', textDecoration: 'none' }}>
+          Sponge Pro Cleaning Services
         </Link>
         <button
           className="navbar-toggler"
@@ -31,7 +31,7 @@ const MainMenu = (props: Props) => {
           className="collapse navbar-collapse offset"
           id="navbarSupportedContent"
         >
-          <ul className="nav navbar-nav menu_nav ml-auto">
+          <ul className="nav navbar-nav menu_nav ms-auto">
             <li className="nav-item active">
               <Link className="nav-link" href="/">
                 Home
@@ -48,53 +48,9 @@ const MainMenu = (props: Props) => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" href="/projects">
-                Projects
-              </Link>
-            </li>
-            <li className="nav-item submenu dropdown">
-              <a
-                href="#"
-                className="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Blog
-              </a>
-              <ul className="dropdown-menu">
-                <li className="nav-item">
-                  <Link className="nav-link" href="/blog">
-                    Blog
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" href="/single-blog">
-                    Blog Details
-                  </Link>
-                </li>
-              </ul>
-            </li>
-            <li className="nav-item">
               <Link className="nav-link" href="/contact">
                 Contact
               </Link>
-            </li>
-          </ul>
-        </div>
-        <div className="right-button">
-          <ul>
-            <li className="shop-icon">
-              <a href="#">
-                <i className="ti-shopping-cart-full"></i>
-                <span>0</span>
-              </a>
-            </li>
-            <li>
-              <a id="search" href="#">
-                <i className="ti-search"></i>
-              </a>
             </li>
           </ul>
         </div>

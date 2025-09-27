@@ -1,7 +1,5 @@
 import { Roboto } from "next/font/google";
 import 'bootstrap/dist/css/bootstrap.min.css'
-import 'owl.carousel/dist/assets/owl.carousel.css'
-import 'owl.carousel/dist/assets/owl.theme.default.css'
 import '@/styles/globals.css'
 import '@/styles/sintec.css'
 import '@/styles/responsive.css'
@@ -13,8 +11,8 @@ const roboto = Roboto({
 });
 
 export const metadata = {
-  title: 'Sintec - Modern Business Template',
-  description: 'Professional business template built with Next.js 15',
+  title: 'Sponge Pro Cleaning Services - Professional Cleaning in Winnipeg',
+  description: 'Professional cleaning services in Winnipeg, MB. Residential and commercial cleaning solutions you can trust.',
 }
 
 export default function RootLayout({

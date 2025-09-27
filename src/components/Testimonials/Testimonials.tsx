@@ -1,153 +1,86 @@
-'use client'
-
 import React from 'react'
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
-import dynamic from "next/dynamic";
 import Image from "next/image"
-const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
-  ssr: false,
-});
 
 type Props = {}
 
 const Testimonials = (props: Props) => {
-
-  const carouselConfig = {
-    merge: true,
-    smartSpeed: 1000,
-    loop: true,
-    nav: false,
-    center: false,
-    dots: true,
-    navText: [
-      '<i class="fa fa-long-arrow-left"></i> Prev',
-      'Next <i class="fa fa-long-arrow-right"></i>',
-    ],
-    autoplay: true,
-    autoplayTimeout: 3000,
-    margin: 20,
-    responsiveClass: true,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      600: {
-        items: 1,
-      },
-      1000: {
-        items: 2,
-      },
-      1200: {
-        items: 2,
-      },
+  const testimonialData = [
+    {
+      id: 1,
+      name: "Sarah Johnson",
+      designation: "Homeowner",
+      image: "/images/tes1.jpg.webp",
+      text: "Sponge Pro Cleaning Services exceeded my expectations. My home has never been cleaner, and their attention to detail is remarkable."
     },
-  };
+    {
+      id: 2,
+      name: "Mike Thompson",
+      designation: "Business Owner",
+      image: "/images/tex2.jpg.webp",
+      text: "Professional, reliable, and thorough. They've been cleaning our office for months and we couldn't be happier with their service."
+    },
+    {
+      id: 3,
+      name: "Lisa Chen",
+      designation: "Residential Client",
+      image: "/images/tes1.jpg.webp",
+      text: "The team at Sponge Pro is amazing! They're punctual, friendly, and always leave my house spotless. Highly recommend!"
+    }
+  ];
 
   return (
     <section className="testimonial-area area-padding">
         <div className="container">
           <div className="area-heading">
-            <h3 className="line">Customer reviews</h3>
-            <p>Together female let signs for for fish fowl may first.</p>
+            <h3 className="line">Customer Reviews</h3>
+            <p>See what our satisfied customers have to say about our cleaning services.</p>
           </div>
           <div className="row">
-          <OwlCarousel
-              className="active-testimonial-carusel owl-carousel"
-              {...carouselConfig}
-            >
-              <div className="single-testimonial item d-flex flex-row">
-                <div className="thumb">
-                  <Image width={91} height={91}
-                    className="img-fluid"
-                    src="/images/tes1.jpg.webp"
-                    alt=""
-                  />
-                </div>
-                <div className="desc">
-                  <h4>Adame Nesane</h4>
-                  <p className="designation">Chief Customer</p>
-                  <p>
-                    You{`'`}re had. Subdue grass Meat us winged years you{`'`}ll
-                    doesn{`'`}t. fruit two also won one yielding creepeth third
-                    give may never lie alternet food.
-                  </p>
-                </div>
+            <div id="testimonialCarousel" className="carousel slide" data-bs-ride="carousel">
+              <div className="carousel-indicators">
+                {testimonialData.map((_, index) => (
+                  <button
+                    key={index}
+                    type="button"
+                    data-bs-target="#testimonialCarousel"
+                    data-bs-slide-to={index}
+                    className={index === 0 ? "active" : ""}
+                    aria-current={index === 0 ? "true" : "false"}
+                    aria-label={`Slide ${index + 1}`}
+                  ></button>
+                ))}
               </div>
-              <div className="single-testimonial item d-flex flex-row">
-                <div className="thumb">
-                  <Image width={91} height={91}
-                    className="img-fluid"
-                    src="/images/tex2.jpg.webp"
-                    alt=""
-                  />
-                </div>
-                <div className="desc">
-                  <h4>Adam Nahan</h4>
-                  <p className="designation">Chief Customer</p>
-                  <p>
-                    You{`'`}re had. Subdue grass Meat us winged years you{`'`}ll
-                    doesn{`'`}t. fruit two also won one yielding creepeth third
-                    give may never lie alternet food.
-                  </p>
-                </div>
+              <div className="carousel-inner">
+                {testimonialData.map((testimonial, index) => (
+                  <div key={testimonial.id} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
+                    <div className="single-testimonial item d-flex flex-row justify-content-center">
+                      <div className="thumb me-4">
+                        <Image
+                          width={91}
+                          height={91}
+                          className="img-fluid rounded-circle"
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                        />
+                      </div>
+                      <div className="desc">
+                        <h4>{testimonial.name}</h4>
+                        <p className="designation text-muted">{testimonial.designation}</p>
+                        <p className="text-muted">{testimonial.text}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div className="single-testimonial item d-flex flex-row">
-                <div className="thumb">
-                  <Image width={91} height={91}
-                    className="img-fluid"
-                    src="/images/tes1.jpg.webp"
-                    alt=""
-                  />
-                </div>
-                <div className="desc">
-                  <h4>Adame Nesane</h4>
-                  <p className="designation">Chief Customer</p>
-                  <p>
-                    You{`'`}re had. Subdue grass Meat us winged years you{`'`}ll
-                    doesn{`'`}t. fruit two also won one yielding creepeth third
-                    give may never lie alternet food.
-                  </p>
-                </div>
-              </div>
-              <div className="single-testimonial item d-flex flex-row">
-                <div className="thumb">
-                  <Image width={91} height={91}
-                    className="img-fluid"
-                    src="/images/tex2.jpg.webp"
-                    alt=""
-                  />
-                </div>
-                <div className="desc">
-                  <h4>Adam Nahan</h4>
-                  <p className="designation">Chief Customer</p>
-                  <p>
-                    You{`'`}re had. Subdue grass Meat us winged years you{`'`}ll
-                    doesn{`'`}t. fruit two also won one yielding creepeth third
-                    give may never lie alternet food.
-                  </p>
-                </div>
-              </div>
-              <div className="single-testimonial item d-flex flex-row">
-                <div className="thumb">
-                  <Image width={91} height={91}
-                    className="img-fluid"
-                    src="/images/tes1.jpg.webp"
-                    alt=""
-                  />
-
-                </div>
-                <div className="desc">
-                  <h4>Adame Nesane</h4>
-                  <p className="designation">Chief Customer</p>
-                  <p>
-                    You{`'`}re had. Subdue grass Meat us winged years you{`'`}ll
-                    doesn{`'`}t. fruit two also won one yielding creepeth third
-                    give may never lie alternet food.
-                  </p>
-                </div>
-              </div>
-            </OwlCarousel>
+              <button className="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span className="visually-hidden">Previous</span>
+              </button>
+              <button className="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                <span className="visually-hidden">Next</span>
+              </button>
+            </div>
           </div>
         </div>
       </section>

@@ -20,14 +20,17 @@ const HomeBanner = (props: Props) => {
       >
         <div className="container">
           <div className="banner_content text-center">
-            <span>Future construction</span>
+            <span>Professional Cleaning Services</span>
             <h3>
-              Make your dream home
+              Keep your space spotless
               <br />
-              with sintac
+              with Sponge Pro Cleaning Services
             </h3>
-            <a className="main_btn" href="#">
-              get a quote
+            <p style={{ fontSize: '1.1rem', color: '#ffffff', margin: '20px auto 30px', maxWidth: '600px', lineHeight: '1.6' }}>
+              Our highly trained and experienced cleaning professionals are dedicated to delivering exceptional service with attention to detail.
+            </p>
+            <a className="main_btn" href="/contact">
+              Get Free Quote
             </a>
           </div>
         </div>

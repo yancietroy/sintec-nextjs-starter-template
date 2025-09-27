@@ -6,8 +6,8 @@ import Footer from '@/components/Footer/Footer';
 import PageHeader from '@/components/PageHeader/PageHeader';
 
 export const metadata = {
-  title: 'Our Services - Sintec',
-  description: 'Discover our comprehensive range of professional business services.',
+  title: 'Our Services - Sponge Pro Cleaning Services',
+  description: 'Discover our comprehensive range of professional cleaning services for residential and commercial properties in Winnipeg.',
 }
 
 export default function ServicesPage() {

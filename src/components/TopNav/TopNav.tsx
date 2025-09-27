@@ -7,16 +7,17 @@ const TopNav = (props: Props) => {
     <div className="top_menu row m-0">
           <div className="container">
             <div className="float-start">
-              <a className="dn_btn" href="">
-                <i className="ti-mobile"></i>+1 (205) 325-1235
+              <a className="dn_btn" href="tel:+12042028257">
+                <i className="ti-mobile"></i>+1-204 202 8257
               </a>
               <span className="dn_btn">
                 {" "}
-                <i className="ti-location-pin"></i> 4256 Marshville Road,
-                Poughkeepsie, NY 12601
+                <i className="ti-location-pin"></i> Winnipeg, MB R3G 2H5, Canada
               </span>
             </div>
             <div className="float-end">
+              {/* Future social media links when client is ready */}
+              {/*
               <span className="follow_us">Follow us: </span>
               <ul className="list header_social">
                 <li>
@@ -45,6 +46,7 @@ const TopNav = (props: Props) => {
                   </a>
                 </li>
               </ul>
+              */}
             </div>
           </div>
         </div>
