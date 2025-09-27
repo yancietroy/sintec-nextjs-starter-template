@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useRef } from 'react'
 import TopNav from '../TopNav/TopNav'
 import MainMenu from '../MainMenu/MainMenu'

@@ -1,46 +1,79 @@
-import React from 'react'
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
-import dynamic from "next/dynamic";
+'use client'
+
+import React, { useCallback, startTransition } from 'react'
+import useEmblaCarousel from 'embla-carousel-react'
 import Image from "next/image"
-const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
-  ssr: false,
-});
 
 type Props = {}
 
 const Testimonials = (props: Props) => {
-
-  const carouselConfig = {
-    merge: true,
-    smartSpeed: 1000,
+  const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
-    nav: false,
-    center: false,
-    dots: true,
-    navText: [
-      '<i class="fa fa-long-arrow-left"></i> Prev',
-      'Next <i class="fa fa-long-arrow-right"></i>',
-    ],
-    autoplay: true,
-    autoplayTimeout: 3000,
-    margin: 20,
-    responsiveClass: true,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      600: {
-        items: 1,
-      },
-      1000: {
-        items: 2,
-      },
-      1200: {
-        items: 2,
-      },
+    align: 'start',
+    skipSnaps: false,
+    dragFree: false,
+    containScroll: 'trimSnaps',
+    slidesToScroll: 1,
+    breakpoints: {
+      '(min-width: 1000px)': { slidesToScroll: 2 }
+    }
+  });
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) {
+      // Use React 19's startTransition for non-urgent updates
+      startTransition(() => {
+        emblaApi.scrollPrev();
+      });
+    }
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) {
+      // Use React 19's startTransition for non-urgent updates
+      startTransition(() => {
+        emblaApi.scrollNext();
+      });
+    }
+  }, [emblaApi]);
+
+  const testimonialData = [
+    {
+      id: 1,
+      name: "Adame Nesane",
+      designation: "Chief Customer",
+      image: "/images/tes1.jpg.webp",
+      text: "You're had. Subdue grass Meat us winged years you'll doesn't. fruit two also won one yielding creepeth third give may never lie alternet food."
     },
-  };
+    {
+      id: 2,
+      name: "Adam Nahan",
+      designation: "Chief Customer",
+      image: "/images/tex2.jpg.webp",
+      text: "You're had. Subdue grass Meat us winged years you'll doesn't. fruit two also won one yielding creepeth third give may never lie alternet food."
+    },
+    {
+      id: 3,
+      name: "Adame Nesane",
+      designation: "Chief Customer",
+      image: "/images/tes1.jpg.webp",
+      text: "You're had. Subdue grass Meat us winged years you'll doesn't. fruit two also won one yielding creepeth third give may never lie alternet food."
+    },
+    {
+      id: 4,
+      name: "Adam Nahan",
+      designation: "Chief Customer",
+      image: "/images/tex2.jpg.webp",
+      text: "You're had. Subdue grass Meat us winged years you'll doesn't. fruit two also won one yielding creepeth third give may never lie alternet food."
+    },
+    {
+      id: 5,
+      name: "Adame Nesane",
+      designation: "Chief Customer",
+      image: "/images/tes1.jpg.webp",
+      text: "You're had. Subdue grass Meat us winged years you'll doesn't. fruit two also won one yielding creepeth third give may never lie alternet food."
+    }
+  ];
 
   return (
     <section className="testimonial-area area-padding">
@@ -50,102 +83,47 @@ const Testimonials = (props: Props) => {
             <p>Together female let signs for for fish fowl may first.</p>
           </div>
           <div className="row">
-          <OwlCarousel
-              className="active-testimonial-carusel owl-carousel"
-              {...carouselConfig}
-            >
-              <div className="single-testimonial item d-flex flex-row">
-                <div className="thumb">
-                  <Image width={91} height={91}
-                    className="img-fluid"
-                    src="/images/tes1.jpg.webp"
-                    alt=""
-                  />
-                </div>
-                <div className="desc">
-                  <h4>Adame Nesane</h4>
-                  <p className="designation">Chief Customer</p>
-                  <p>
-                    You{`'`}re had. Subdue grass Meat us winged years you{`'`}ll
-                    doesn{`'`}t. fruit two also won one yielding creepeth third
-                    give may never lie alternet food.
-                  </p>
-                </div>
+            <div className="embla" ref={emblaRef}>
+              <div className="embla__container" style={{ display: 'flex' }}>
+                {testimonialData.map((testimonial) => (
+                  <div key={testimonial.id} className="embla__slide" style={{ flex: '0 0 100%', minWidth: 0, marginRight: '20px' }}>
+                    <div className="single-testimonial item d-flex flex-row">
+                      <div className="thumb">
+                        <Image
+                          width={91}
+                          height={91}
+                          className="img-fluid"
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                        />
+                      </div>
+                      <div className="desc">
+                        <h4>{testimonial.name}</h4>
+                        <p className="designation">{testimonial.designation}</p>
+                        <p>{testimonial.text}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div className="single-testimonial item d-flex flex-row">
-                <div className="thumb">
-                  <Image width={91} height={91}
-                    className="img-fluid"
-                    src="/images/tex2.jpg.webp"
-                    alt=""
-                  />
-                </div>
-                <div className="desc">
-                  <h4>Adam Nahan</h4>
-                  <p className="designation">Chief Customer</p>
-                  <p>
-                    You{`'`}re had. Subdue grass Meat us winged years you{`'`}ll
-                    doesn{`'`}t. fruit two also won one yielding creepeth third
-                    give may never lie alternet food.
-                  </p>
-                </div>
-              </div>
-              <div className="single-testimonial item d-flex flex-row">
-                <div className="thumb">
-                  <Image width={91} height={91}
-                    className="img-fluid"
-                    src="/images/tes1.jpg.webp"
-                    alt=""
-                  />
-                </div>
-                <div className="desc">
-                  <h4>Adame Nesane</h4>
-                  <p className="designation">Chief Customer</p>
-                  <p>
-                    You{`'`}re had. Subdue grass Meat us winged years you{`'`}ll
-                    doesn{`'`}t. fruit two also won one yielding creepeth third
-                    give may never lie alternet food.
-                  </p>
-                </div>
-              </div>
-              <div className="single-testimonial item d-flex flex-row">
-                <div className="thumb">
-                  <Image width={91} height={91}
-                    className="img-fluid"
-                    src="/images/tex2.jpg.webp"
-                    alt=""
-                  />
-                </div>
-                <div className="desc">
-                  <h4>Adam Nahan</h4>
-                  <p className="designation">Chief Customer</p>
-                  <p>
-                    You{`'`}re had. Subdue grass Meat us winged years you{`'`}ll
-                    doesn{`'`}t. fruit two also won one yielding creepeth third
-                    give may never lie alternet food.
-                  </p>
-                </div>
-              </div>
-              <div className="single-testimonial item d-flex flex-row">
-                <div className="thumb">
-                  <Image width={91} height={91}
-                    className="img-fluid"
-                    src="/images/tes1.jpg.webp"
-                    alt=""
-                  />
-                  
-                </div>
-                <div className="desc">
-                  <h4>Adame Nesane</h4>
-                  <p className="designation">Chief Customer</p>
-                  <p>
-                    You{`'`}re had. Subdue grass Meat us winged years you{`'`}ll
-                    doesn{`'`}t. fruit two also won one yielding creepeth third
-                    give may never lie alternet food.
-                  </p>
-                </div>
-              </div>
-            </OwlCarousel>
+            </div>
+
+            {/* React 19 Concurrent Navigation */}
+            <div className="embla__nav text-center mt-4">
+              <button
+                className="btn btn-outline-primary me-3"
+                onClick={scrollPrev}
+                style={{ marginRight: '10px' }}
+              >
+                ← Previous
+              </button>
+              <button
+                className="btn btn-outline-primary"
+                onClick={scrollNext}
+              >
+                Next →
+              </button>
+            </div>
           </div>
         </div>
       </section>

@@ -1,8 +1,53 @@
-import React from "react";
+'use client'
+
+import React, { useOptimistic, useRef } from "react";
 
 type Props = {};
 
+type ContactMessage = {
+  id: string;
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+  status: 'pending' | 'sent' | 'error';
+};
+
 const ContactUs = (props: Props) => {
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const [optimisticMessages, addOptimisticMessage] = useOptimistic<ContactMessage[], ContactMessage>(
+    [],
+    (state, newMessage) => [...state, newMessage]
+  );
+
+  async function sendMessage(formData: FormData) {
+    const message: ContactMessage = {
+      id: Date.now().toString(),
+      name: formData.get('name') as string,
+      email: formData.get('email') as string,
+      subject: formData.get('subject') as string,
+      message: formData.get('message') as string,
+      status: 'pending'
+    };
+
+    // Optimistically add the message
+    addOptimisticMessage(message);
+
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+
+      // Reset form on success
+      formRef.current?.reset();
+
+      // In a real app, you'd handle the response here
+      console.log('Message sent successfully:', message);
+    } catch (error) {
+      console.error('Failed to send message:', error);
+    }
+  }
+
   return (
     <section className="contact-section area-padding">
       <div className="container">
@@ -23,11 +68,10 @@ const ContactUs = (props: Props) => {
           </div>
           <div className="col-lg-8">
             <form
+              ref={formRef}
               className="form-contact contact_form"
-              action="contact_process.php"
-              method="post"
+              action={sendMessage}
               id="contactForm"
-              noValidate={true}
             >
               <div className="row">
                 <div className="col-12">
@@ -78,10 +122,24 @@ const ContactUs = (props: Props) => {
               </div>
               <div className="form-group mt-3">
                 <button type="submit" className="button button-contactForm">
-                  Send Message
+                  {optimisticMessages.length > 0 && optimisticMessages[optimisticMessages.length - 1]?.status === 'pending'
+                    ? 'Sending...'
+                    : 'Send Message'
+                  }
                 </button>
               </div>
             </form>
+
+            {/* Show optimistic feedback */}
+            {optimisticMessages.length > 0 && (
+              <div className="mt-3">
+                {optimisticMessages.map((msg) => (
+                  <div key={msg.id} className={`alert ${msg.status === 'pending' ? 'alert-info' : 'alert-success'}`}>
+                    {msg.status === 'pending' ? 'Sending your message...' : 'Message sent successfully!'}
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
           <div className="col-lg-4">
             <div className="media contact-info">
