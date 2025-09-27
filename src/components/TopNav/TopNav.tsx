@@ -4,9 +4,9 @@ type Props = {}
 
 const TopNav = (props: Props) => {
   return (
-    <div className="top_menu row m0">
+    <div className="top_menu row m-0">
           <div className="container">
-            <div className="float-left">
+            <div className="float-start">
               <a className="dn_btn" href="">
                 <i className="ti-mobile"></i>+1 (205) 325-1235
               </a>
@@ -16,7 +16,7 @@ const TopNav = (props: Props) => {
                 Poughkeepsie, NY 12601
               </span>
             </div>
-            <div className="float-right">
+            <div className="float-end">
               <span className="follow_us">Follow us: </span>
               <ul className="list header_social">
                 <li>

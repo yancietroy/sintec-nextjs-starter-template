@@ -16,8 +16,8 @@ const MainMenu = (props: Props) => {
         <button
           className="navbar-toggler"
           type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
@@ -56,7 +56,7 @@ const MainMenu = (props: Props) => {
               <a
                 href="#"
                 className="nav-link dropdown-toggle"
-                data-toggle="dropdown"
+                data-bs-toggle="dropdown"
                 role="button"
                 aria-haspopup="true"
                 aria-expanded="false"
