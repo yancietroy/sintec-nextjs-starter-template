@@ -1,10 +1,14 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 type Props = {}
 
-const MainMenu = (props: Props) => { 
+const MainMenu = (props: Props) => {
+  const pathname = usePathname();
 
   return (
     <div className="main_menu">
@@ -32,23 +36,23 @@ const MainMenu = (props: Props) => {
           id="navbarSupportedContent"
         >
           <ul className="nav navbar-nav menu_nav ms-auto">
-            <li className="nav-item active">
-              <Link className="nav-link" href="/">
+            <li className={`nav-item ${pathname === '/' ? 'active' : ''}`}>
+              <Link className="nav-link" href="/" style={{ fontWeight: '600' }}>
                 Home
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" href="/about-us">
+            <li className={`nav-item ${pathname === '/about-us' ? 'active' : ''}`}>
+              <Link className="nav-link" href="/about-us" style={{ fontWeight: '600' }}>
                 About
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" href="/services">
+            <li className={`nav-item ${pathname === '/services' ? 'active' : ''}`}>
+              <Link className="nav-link" href="/services" style={{ fontWeight: '600' }}>
                 Services
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" href="/contact">
+            <li className={`nav-item ${pathname === '/contact' ? 'active' : ''}`}>
+              <Link className="nav-link" href="/contact" style={{ fontWeight: '600' }}>
                 Contact
               </Link>
             </li>

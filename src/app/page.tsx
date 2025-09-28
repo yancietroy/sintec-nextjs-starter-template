@@ -8,6 +8,7 @@ import Testimonials from '@/components/Testimonials/Testimonials';
 import Footer from '@/components/Footer/Footer';
 import AsyncStatsCounter from '@/components/AsyncStatsCounter/AsyncStatsCounter';
 import SuspenseWrapper from '@/components/SuspenseWrapper/SuspenseWrapper';
+import ContactSection from '@/components/ContactSection/ContactSection';
 
 export const metadata = {
   title: 'Sponge Pro Cleaning Services - Professional Cleaning in Winnipeg',
@@ -24,6 +25,7 @@ export default function HomePage() {
 
       <Stats />
       {/* <Testimonials /> */}
+      <ContactSection />
       <Footer />
     </>
   )

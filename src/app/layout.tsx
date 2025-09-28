@@ -1,8 +1,10 @@
 import { Roboto } from "next/font/google";
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'aos/dist/aos.css'
 import '@/styles/globals.css'
 import '@/styles/sintec.css'
 import '@/styles/responsive.css'
+import AOSProvider from '@/components/AOSProvider/AOSProvider'
 
 const roboto = Roboto({
   weight: ['400', '700'],
@@ -33,7 +35,9 @@ export default function RootLayout({
         />
       </head>
       <body className={roboto.className}>
-        {children}
+        <AOSProvider>
+          {children}
+        </AOSProvider>
         <script
           src="https://code.jquery.com/jquery-3.6.0.min.js"
           defer

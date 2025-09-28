@@ -6,7 +6,8 @@
       "Bash(cp:*)",
       "Bash(npm install:*)",
       "Bash(npm uninstall:*)",
-      "Bash(npm audit fix:*)"
+      "Bash(npm audit fix:*)",
+      "WebFetch(domain:github.com)"
     ],
     "deny": [],
     "ask": []

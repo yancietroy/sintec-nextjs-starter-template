@@ -10,7 +10,7 @@ const Stats = (props: Props) => {
       <div className="row justify-content-center">
         <div className="col-md-5 col-lg-5">
           <div className="number-img">
-            <Image width={368} height={462} src="/images/about2.png.webp" alt="" />
+            <Image width={368} height={462} src="/images/premium_photo-1677234147127-36046f5fbe78.avif" alt="Professional cleaning service" />
             
           </div>
         </div>
@@ -21,7 +21,7 @@ const Stats = (props: Props) => {
               High Quality Service
             </h4>
             <p>
-              At Sponge Pro Cleaning Services, we understand that every home and office is unique. That's why we provide personalized cleaning solutions tailored to your specific needs, ensuring exceptional results every time.
+              At Sponge Pro Cleaning Services, we understand that every home and office is unique. That&apos;s why we provide personalized cleaning solutions tailored to your specific needs, ensuring exceptional results every time.
             </p>
             {/* Stats will be added when client provides actual data
             <div className="number-wrapper">

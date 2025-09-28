@@ -159,7 +159,7 @@ const ContactUs = (props: Props) => {
                 <h3>
                   <a href="tel:+12042028257">+1-204 202 8257</a>
                 </h3>
-                <p>9 am - 5 pm Flexible Scheduling</p>
+                <p>Call us for immediate assistance</p>
               </div>
             </div>
             <div className="media contact-info">
@@ -172,7 +172,27 @@ const ContactUs = (props: Props) => {
                     admin@spongeprocleaningservices.com
                   </a>
                 </h3>
-                <p>Convenient and flexible scheduling options to fit the busy lifestyles of our clients.</p>
+                <p>Send us your questions anytime</p>
+              </div>
+            </div>
+
+            <div className="business-hours-contact mt-4">
+              <h4 className="mb-3" style={{ color: '#1e3a8a', fontWeight: '600' }}>Business Hours</h4>
+              <div className="hours-list-contact">
+                <div className="single-hour-contact d-flex justify-content-between align-items-center py-2">
+                  <span className="day" style={{ fontWeight: '500' }}>Monday - Friday</span>
+                  <span className="time" style={{ fontWeight: '600', color: '#1e3a8a' }}>9:00 AM - 5:00 PM</span>
+                </div>
+                <div className="single-hour-contact d-flex justify-content-between align-items-center py-2">
+                  <span className="day" style={{ fontWeight: '500' }}>Saturday - Sunday</span>
+                  <span className="time" style={{ fontWeight: '600', color: '#1e3a8a' }}>Flexible Scheduling</span>
+                </div>
+              </div>
+              <div className="hours-note-contact mt-3 p-3" style={{ backgroundColor: '#f8f9fa', borderRadius: '8px', borderLeft: '4px solid #1e3a8a' }}>
+                <p className="mb-0" style={{ fontSize: '14px', color: '#6c757d' }}>
+                  <i className="ti-info-alt me-2" style={{ color: '#1e3a8a' }}></i>
+                  We offer flexible scheduling options on weekends to accommodate your busy lifestyle.
+                </p>
               </div>
             </div>
           </div>

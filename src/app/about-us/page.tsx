@@ -1,8 +1,8 @@
 import Header from '@/components/Header/Header';
 import About from '@/components/About/About';
+import Services from '@/components/Services/Services';
 import Testimonials from '@/components/Testimonials/Testimonials';
 import Footer from '@/components/Footer/Footer';
-import PageHeader from '@/components/PageHeader/PageHeader';
 
 export const metadata = {
   title: 'About Us - Sponge Pro Cleaning Services',
@@ -13,8 +13,8 @@ export default function AboutPage() {
   return (
     <>
       <Header />
-      <PageHeader />
       <About />
+      <Services />
       {/* <Testimonials /> */}
       <Footer />
     </>

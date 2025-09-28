@@ -42,6 +42,127 @@ Table of Content:
 /*Color Variables*/
 /*=================== fonts ====================*/
 @import url("https://fonts.googleapis.com/css?family=Heebo:400,500,700|Roboto:300,400,500,700");
+
+/*Contact Section Styles*/
+.contact-area {
+  background-color: #f8f9fa;
+}
+
+.contact-info .single-contact-info {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.contact-info .single-contact-info:last-child {
+  border-bottom: none;
+}
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #1e3a8a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.contact-icon i {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.contact-details h5 {
+  margin-bottom: 5px;
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+.contact-details p {
+  margin-bottom: 0;
+  color: #6c757d;
+}
+
+.contact-details a {
+  color: #1e3a8a;
+  text-decoration: none;
+}
+
+.contact-details a:hover {
+  color: #2563eb;
+}
+
+.business-hours-card {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  padding: 40px;
+  border-radius: 15px;
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(30, 58, 138, 0.2);
+}
+
+.business-hours-card h3 {
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.single-hour {
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.single-hour:last-child {
+  border-bottom: none;
+}
+
+.single-hour .day {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.single-hour .time {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.hours-note {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #ffffff;
+}
+
+.hours-note p {
+  margin-bottom: 0;
+  color: #ffffff;
+}
+
+.hours-note i {
+  margin-right: 10px;
+  color: #ffffff;
+}
+
+.contact-cta .main_btn {
+  background-color: #ffffff;
+  color: #1e3a8a;
+  border: 2px solid #ffffff;
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.contact-cta .main_btn:hover {
+  background-color: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+}
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 .list {
@@ -2996,7 +3117,7 @@ h6 {
   position: absolute;
   height: 90px;
   width: 90px;
-  background: #fcefed;
+  background: #e6f3ff;
   border-radius: 100%;
   left: 27px;
   z-index: -1;

@@ -8,7 +8,7 @@ type Props = {
 
 const PageHeader = ({ title = "About Us", navTitle = "About Us" }: Props) => {
   return (
-    <section className="hero-banner hero-banner-sm">
+    <section className="hero-banner hero-banner-sm" style={{ display: 'flex', alignItems: 'center', minHeight: '150px', paddingTop: '20px', paddingBottom: '20px' }}>
       <div className="container text-center">
         <h2>{title}</h2>
         <nav aria-label="breadcrumb" className="banner-breadcrumb">

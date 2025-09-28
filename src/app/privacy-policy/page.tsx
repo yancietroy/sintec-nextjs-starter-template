@@ -1,6 +1,5 @@
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
-import PageHeader from '@/components/PageHeader/PageHeader';
 
 export const metadata = {
   title: 'Privacy Policy - Sponge Pro Cleaning Services',
@@ -11,8 +10,6 @@ export default function PrivacyPolicyPage() {
   return (
     <>
       <Header />
-      <PageHeader title="Privacy Policy" navTitle="Privacy Policy" />
-
       <section className="privacy-policy-area area-padding">
         <div className="container">
           <div className="row">
