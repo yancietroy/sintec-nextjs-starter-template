@@ -14,8 +14,17 @@ const MainMenu = (props: Props) => {
     <div className="main_menu">
     <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container">
-        <Link className="navbar-brand logo_h" href="/" style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#1e3a8a', textDecoration: 'none' }}>
-          Sponge Pro Cleaning Services
+        <Link className="navbar-brand logo_h" href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+          <Image
+            src="/images/logo.png"
+            alt="Sponge Pro Cleaning Services"
+            width={50}
+            height={50}
+            style={{ height: 'auto', marginRight: '10px' }}
+          />
+          <span style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#1e3a8a', textTransform: 'capitalize' }}>
+            sponge pro cleaning services
+          </span>
         </Link>
         <button
           className="navbar-toggler"

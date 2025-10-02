@@ -15,6 +15,9 @@ const roboto = Roboto({
 export const metadata = {
   title: 'Sponge Pro Cleaning Services - Professional Cleaning in Winnipeg',
   description: 'Professional cleaning services in Winnipeg, MB. Residential and commercial cleaning solutions you can trust.',
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({

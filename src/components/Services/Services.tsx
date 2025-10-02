@@ -7,12 +7,12 @@ const Services = (props: Props) => {
   return (
     <section className="service-area area-padding" style={{ backgroundColor: '#f0f8ff' }}>
         <div className="container">
-          <div className="area-heading" data-aos="fade-up">
+          <div className="area-heading" data-aos="fade-up" suppressHydrationWarning>
             <h3 className="line">Our Cleaning Services</h3>
             <p>Professional cleaning solutions tailored to meet your specific needs and schedule.</p>
           </div>
           <div className="row">
-            <div className="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="100">
+            <div className="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="100" suppressHydrationWarning>
               <div className="single-service">
                 <div className="service-icon">
                   <Image width={120} height={120} src="/images/reshot-icon-cleaning-cart-9PC5ZHTVL3.svg" alt="Standard Cleaning" />
@@ -29,7 +29,7 @@ const Services = (props: Props) => {
               </div>
             </div>
 
-            <div className="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="200">
+            <div className="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="200" suppressHydrationWarning>
               <div className="single-service">
                 <div className="service-icon">
                   <Image width={92} height={92} src="/images/reshot-icon-cleaning-home-YFKCR4BTAP.svg" alt="Move-In/Move-Out Cleaning" style={{ marginTop: '20px' }} />
@@ -45,7 +45,7 @@ const Services = (props: Props) => {
               </div>
             </div>
 
-            <div className="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="300">
+            <div className="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="300" suppressHydrationWarning>
               <div className="single-service">
                 <div className="service-icon">
                   <Image width={120} height={120} src="/images/reshot-icon-cleaning-products-AMY9VLJQNG.svg" alt="Custom Cleaning Plans" />

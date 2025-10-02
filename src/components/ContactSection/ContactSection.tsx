@@ -7,7 +7,7 @@ const ContactSection = (props: Props) => {
     <section className="contact-area area-padding" style={{ backgroundColor: '#f0f8ff' }}>
       <div className="container">
         <div className="row">
-          <div className="col-lg-6" data-aos="fade-right">
+          <div className="col-lg-6" data-aos="fade-right" suppressHydrationWarning>
             <div className="section-title text-center">
               <h2 style={{ color: '#000000' }}>Get In Touch</h2>
               <p>
@@ -46,7 +46,7 @@ const ContactSection = (props: Props) => {
             </div>
           </div>
 
-          <div className="col-lg-6" data-aos="fade-left">
+          <div className="col-lg-6" data-aos="fade-left" suppressHydrationWarning>
             <div className="business-hours-card">
               <h3 className="mb-4">Business Hours</h3>
               <div className="hours-list">

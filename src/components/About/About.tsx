@@ -8,12 +8,12 @@ const About = (props: Props) => {
     <section className="about-area area-padding">
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-lg-6 d-none d-lg-block" data-aos="fade-right">
+            <div className="col-lg-6 d-none d-lg-block" data-aos="fade-right" suppressHydrationWarning>
               <div className="about-img">
                 <Image width={555} height={485} src="/images/vector-1752217168822-7ea87f87769e.avif" alt="Professional cleaning illustration" />
               </div>
             </div>
-            <div className="col-lg-6" data-aos="fade-left">
+            <div className="col-lg-6" data-aos="fade-left" suppressHydrationWarning>
               <div className="about-content">
                 <h4>
                   PREMIER HOME CLEANING <br />
