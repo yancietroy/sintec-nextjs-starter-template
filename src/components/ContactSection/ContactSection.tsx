@@ -1,46 +1,35 @@
 'use client'
 
-import React, { useOptimistic, useRef } from "react";
+import React, { useState, useRef } from "react";
 
 type Props = {}
 
-type ContactMessage = {
-  id: string;
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-  status: 'pending' | 'sent' | 'error';
-};
-
 const ContactSection = (props: Props) => {
   const formRef = useRef<HTMLFormElement>(null);
+  const [result, setResult] = useState("");
 
-  const [optimisticMessages, addOptimisticMessage] = useOptimistic<ContactMessage[], ContactMessage>(
-    [],
-    (state, newMessage) => [...state, newMessage]
-  );
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.currentTarget);
 
-  async function sendMessage(formData: FormData) {
-    const message: ContactMessage = {
-      id: Date.now().toString(),
-      name: formData.get('name') as string,
-      email: formData.get('email') as string,
-      subject: formData.get('subject') as string,
-      message: formData.get('message') as string,
-      status: 'pending'
-    };
+    formData.append("access_key", "35f51f8d-ae9f-46dd-9456-041051c25016");
 
-    addOptimisticMessage(message);
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
 
-    try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Thank you for contacting us! We've received your message and will get back to you as soon as possible.");
       formRef.current?.reset();
-      console.log('Message sent successfully:', message);
-    } catch (error) {
-      console.error('Failed to send message:', error);
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
     }
-  }
+  };
 
   return (
     <section className="contact-area area-padding" style={{ backgroundColor: '#ffffff' }}>
@@ -48,16 +37,16 @@ const ContactSection = (props: Props) => {
         <div className="row">
           <div className="col-lg-5" data-aos="fade-right" suppressHydrationWarning>
             <div className="section-title text-center mb-5">
-              <h2 style={{ color: '#000000', fontSize: 'clamp(2rem, 4vw, 2.5rem)', marginBottom: '20px' }}>Get In Touch</h2>
-              <p style={{ fontSize: '1.1rem' }}>
-                Ready to experience professional cleaning? Contact us today for a free quote
-                and let us take care of your cleaning needs.
+              <h2 style={{ color: '#000000', fontSize: 'clamp(2rem, 4vw, 2.5rem)', marginBottom: '20px' }}>Request a Quote</h2>
+              <p style={{ fontSize: '1.1rem', lineHeight: '1.7', color: '#6c757d' }}>
+                Tell us about your space — and we'll provide a quote tailored to your cleaning needs and schedule.
+                Whether it's your home or business, we're here to help make your space spotless.
               </p>
             </div>
             <form
               ref={formRef}
               className="form-contact contact_form"
-              action={sendMessage}
+              onSubmit={onSubmit}
             >
               <div className="row">
                 <div className="col-sm-6">
@@ -103,26 +92,30 @@ const ContactSection = (props: Props) => {
                       rows={9}
                       placeholder="Enter Message"
                     ></textarea>
+                    <small style={{ display: 'block', marginTop: '8px', color: '#888', fontStyle: 'italic' }}>
+                      We take customer privacy seriously and do not sell or give out any customer information.
+                    </small>
                   </div>
                 </div>
               </div>
               <div className="form-group mt-3">
                 <button type="submit" className="button button-contactForm">
-                  {optimisticMessages.length > 0 && optimisticMessages[optimisticMessages.length - 1]?.status === 'pending'
-                    ? 'Sending...'
-                    : 'Send Message'
-                  }
+                  Send Message
                 </button>
               </div>
             </form>
 
-            {optimisticMessages.length > 0 && (
+            {result && (
               <div className="mt-3">
-                {optimisticMessages.map((msg) => (
-                  <div key={msg.id} className={`alert ${msg.status === 'pending' ? 'alert-info' : 'alert-success'}`}>
-                    {msg.status === 'pending' ? 'Sending your message...' : 'Message sent successfully!'}
-                  </div>
-                ))}
+                <div className={`alert ${result.includes("Thank you") ? 'alert-success' : 'alert-info'} alert-dismissible fade show`} role="alert">
+                  {result}
+                  <button
+                    type="button"
+                    className="btn-close"
+                    onClick={() => setResult("")}
+                    aria-label="Close"
+                  ></button>
+                </div>
               </div>
             )}
           </div>
@@ -141,9 +134,9 @@ const ContactSection = (props: Props) => {
                 We're currently expanding our team.
               </p>
               <p style={{ fontSize: '0.95rem', lineHeight: '1.7', color: '#6c757d', marginBottom: '25px' }}>
-                Interested in joining us? Learn more about our process, and flexible scheduling. Currently hiring for part-time positions.
+                Interested in joining us? Learn more about our process and flexible scheduling.
               </p>
-              <a href="/contact" className="btn btn-md hero-btn-primary" style={{
+              <a href="/apply" className="btn btn-md hero-btn-primary" style={{
                 padding: '12px 28px'
               }}>
                 Apply Now

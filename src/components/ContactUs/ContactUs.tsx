@@ -1,76 +1,51 @@
 'use client'
 
-import React, { useOptimistic, useRef } from "react";
+import React, { useState, useRef } from "react";
 
 type Props = {};
 
-type ContactMessage = {
-  id: string;
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-  status: 'pending' | 'sent' | 'error';
-};
-
 const ContactUs = (props: Props) => {
   const formRef = useRef<HTMLFormElement>(null);
+  const [result, setResult] = useState("");
 
-  const [optimisticMessages, addOptimisticMessage] = useOptimistic<ContactMessage[], ContactMessage>(
-    [],
-    (state, newMessage) => [...state, newMessage]
-  );
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.currentTarget);
 
-  async function sendMessage(formData: FormData) {
-    const message: ContactMessage = {
-      id: Date.now().toString(),
-      name: formData.get('name') as string,
-      email: formData.get('email') as string,
-      subject: formData.get('subject') as string,
-      message: formData.get('message') as string,
-      status: 'pending'
-    };
+    formData.append("access_key", "35f51f8d-ae9f-46dd-9456-041051c25016");
 
-    // Optimistically add the message
-    addOptimisticMessage(message);
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
 
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+    const data = await response.json();
 
-      // Reset form on success
+    if (data.success) {
+      setResult("Thank you for contacting us! We've received your message and will get back to you as soon as possible.");
       formRef.current?.reset();
-
-      // In a real app, you'd handle the response here
-      console.log('Message sent successfully:', message);
-    } catch (error) {
-      console.error('Failed to send message:', error);
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
     }
-  }
+  };
 
   return (
     <section className="contact-section area-padding">
       <div className="container">
-        <div className="d-none d-sm-block mb-5 pb-4">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2571.8434727883!2d-97.2019435!3d49.8954327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ea73fa4b2d6d3b%3A0x8f8f8f8f8f8f8f8f!2sR3G%202H5%2C%20Winnipeg%2C%20MB%2C%20Canada!5e0!3m2!1sen!2sca!4v1735378800000!5m2!1sen!2sca"
-            width="100%"
-            height="450"
-            style={{ border: 0 }}
-            allowFullScreen={true}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
         <div className="row">
-          <div className="col-12">
-            <h2 className="contact-title">Get in Touch</h2>
+          <div className="col-12 text-center mb-4">
+            <h2 className="contact-title" style={{ fontSize: 'clamp(2rem, 4vw, 2.5rem)', marginBottom: '20px' }}>Contact Us</h2>
+            <p style={{ fontSize: '1.1rem', lineHeight: '1.7', color: '#6c757d', maxWidth: '700px', margin: '0 auto' }}>
+              Send us a message for quotes or inquiries.
+            </p>
           </div>
           <div className="col-lg-8">
             <form
               ref={formRef}
               className="form-contact contact_form"
-              action={sendMessage}
+              onSubmit={onSubmit}
               id="contactForm"
             >
               <div className="row">
@@ -117,27 +92,30 @@ const ContactUs = (props: Props) => {
                       rows={9}
                       placeholder="Enter Message"
                     ></textarea>
+                    <small style={{ display: 'block', marginTop: '8px', color: '#888', fontStyle: 'italic' }}>
+                      We take customer privacy seriously and do not sell or give out any customer information.
+                    </small>
                   </div>
                 </div>
               </div>
               <div className="form-group mt-3">
                 <button type="submit" className="button button-contactForm">
-                  {optimisticMessages.length > 0 && optimisticMessages[optimisticMessages.length - 1]?.status === 'pending'
-                    ? 'Sending...'
-                    : 'Send Message'
-                  }
+                  Send Message
                 </button>
               </div>
             </form>
 
-            {/* Show optimistic feedback */}
-            {optimisticMessages.length > 0 && (
+            {result && (
               <div className="mt-3">
-                {optimisticMessages.map((msg) => (
-                  <div key={msg.id} className={`alert ${msg.status === 'pending' ? 'alert-info' : 'alert-success'}`}>
-                    {msg.status === 'pending' ? 'Sending your message...' : 'Message sent successfully!'}
-                  </div>
-                ))}
+                <div className={`alert ${result.includes("Thank you") ? 'alert-success' : 'alert-info'} alert-dismissible fade show`} role="alert">
+                  {result}
+                  <button
+                    type="button"
+                    className="btn-close"
+                    onClick={() => setResult("")}
+                    aria-label="Close"
+                  ></button>
+                </div>
               </div>
             )}
           </div>
@@ -196,6 +174,18 @@ const ContactUs = (props: Props) => {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="d-none d-sm-block mt-5 pt-4">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2571.8434727883!2d-97.2019435!3d49.8954327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ea73fa4b2d6d3b%3A0x8f8f8f8f8f8f8f8f!2sR3G%202H5%2C%20Winnipeg%2C%20MB%2C%20Canada!5e0!3m2!1sen!2sca!4v1735378800000!5m2!1sen!2sca"
+            width="100%"
+            height="450"
+            style={{ border: 0, borderRadius: '12px' }}
+            allowFullScreen={true}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
     </section>
