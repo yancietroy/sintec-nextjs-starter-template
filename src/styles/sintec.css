@@ -2885,9 +2885,9 @@ h6 {
   transition: all 300ms linear 0s;
 }
 .main_btn:hover {
-  background: #fff;
-  color: #1e3a8a;
-  border: 1px solid #fff;
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #007bff;
+  color: #fff;
+  border: 1px solid #007bff;
 }
 
 /*=================== custom button rule start ====================*/
