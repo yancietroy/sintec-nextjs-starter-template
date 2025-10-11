@@ -17,10 +17,10 @@ const roboto = Roboto({
 export const metadata = {
   metadataBase: new URL('https://www.spongeprocleaningservices.com'),
   title: {
-    default: 'Sponge Pro Cleaning Services - Professional Cleaning in Winnipeg',
+    default: 'Sponge Pro Cleaning Services | Winnipeg Cleaners',
     template: '%s | Sponge Pro Cleaning Services'
   },
-  description: 'Professional cleaning services in Winnipeg, MB. Residential and commercial cleaning solutions you can trust.',
+  description: 'Expert residential & commercial cleaning in Winnipeg, MB. Trusted, reliable service for homes and businesses. Free quotes available today.',
   keywords: ['cleaning services Winnipeg', 'residential cleaning', 'commercial cleaning', 'professional cleaners', 'house cleaning Winnipeg', 'office cleaning', 'move-in cleaning', 'move-out cleaning'],
   authors: [{ name: 'Sponge Pro Cleaning Services' }],
   creator: 'Sponge Pro Cleaning Services',
@@ -32,11 +32,11 @@ export const metadata = {
     locale: 'en_CA',
     url: 'https://www.spongeprocleaningservices.com',
     siteName: 'Sponge Pro Cleaning Services',
-    title: 'Sponge Pro Cleaning Services - Professional Cleaning in Winnipeg',
-    description: 'Professional cleaning services in Winnipeg, MB. Residential and commercial cleaning solutions you can trust.',
+    title: 'Sponge Pro Cleaning Services | Winnipeg Cleaners',
+    description: 'Expert residential & commercial cleaning in Winnipeg, MB. Trusted, reliable service for homes and businesses. Free quotes available today.',
     images: [
       {
-        url: '/images/152a815e-685b-4f82-b3f2-eb526ddb7c7f.jpeg',
+        url: 'https://www.spongeprocleaningservices.com/images/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Sponge Pro Cleaning Services - Professional Cleaning',
@@ -47,9 +47,9 @@ export const metadata = {
   // Twitter Card
   twitter: {
     card: 'summary_large_image',
-    title: 'Sponge Pro Cleaning Services - Professional Cleaning in Winnipeg',
-    description: 'Professional cleaning services in Winnipeg, MB. Residential and commercial cleaning solutions you can trust.',
-    images: ['/images/152a815e-685b-4f82-b3f2-eb526ddb7c7f.jpeg'],
+    title: 'Sponge Pro Cleaning Services | Winnipeg Cleaners',
+    description: 'Expert residential & commercial cleaning in Winnipeg, MB. Trusted, reliable service for homes and businesses. Free quotes available today.',
+    images: ['https://www.spongeprocleaningservices.com/images/og-image.jpg'],
   },
 
   // Icons
