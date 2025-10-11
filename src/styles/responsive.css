@@ -418,10 +418,11 @@
 	============================================================================================ */
 }
 
-/* Join Us Card - Desktop height matches map */
+/* Join Us Card and Business Hours Card - Match heights on desktop */
 @media (min-width: 992px) {
-	.join-us-card {
-		height: 450px !important;
+	.join-us-card,
+	.business-hours-card {
+		min-height: 350px;
 	}
 }
 

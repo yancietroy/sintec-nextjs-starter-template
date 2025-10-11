@@ -2,8 +2,18 @@ import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 
 export const metadata = {
-  title: 'Privacy Policy - Sponge Pro Cleaning Services',
+  title: 'Privacy Policy',
   description: 'Privacy Policy for Sponge Pro Cleaning Services. Learn how we collect, use, and protect your personal information.',
+  alternates: {
+    canonical: 'https://www.spongeprocleaningservices.com/privacy-policy',
+  },
+  openGraph: {
+    url: 'https://www.spongeprocleaningservices.com/privacy-policy',
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
 }
 
 // Force static generation for instant navigation

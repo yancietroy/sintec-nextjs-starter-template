@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect } from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -9,29 +9,15 @@ type Props = {}
 
 const MainMenu = (props: Props) => {
   const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(() => {
-    // Close mobile menu when clicking on nav links
-    const navLinks = document.querySelectorAll('.navbar-collapse .nav-link');
-    const navbarCollapse = document.getElementById('navbarSupportedContent');
-    const navbarToggler = document.querySelector('.navbar-toggler');
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
-    const handleClick = () => {
-      if (navbarCollapse?.classList.contains('show')) {
-        navbarToggler?.dispatchEvent(new Event('click', { bubbles: true }));
-      }
-    };
-
-    navLinks.forEach(link => {
-      link.addEventListener('click', handleClick);
-    });
-
-    return () => {
-      navLinks.forEach(link => {
-        link.removeEventListener('click', handleClick);
-      });
-    };
-  }, []);
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
     <div className="main_menu">
@@ -52,10 +38,9 @@ const MainMenu = (props: Props) => {
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
+          onClick={toggleMenu}
           aria-controls="navbarSupportedContent"
-          aria-expanded="false"
+          aria-expanded={isMenuOpen}
           aria-label="Toggle navigation"
         >
           <span className="icon-bar"></span>
@@ -64,27 +49,27 @@ const MainMenu = (props: Props) => {
         </button>
 
         <div
-          className="collapse navbar-collapse offset"
+          className={`collapse navbar-collapse offset ${isMenuOpen ? 'show' : ''}`}
           id="navbarSupportedContent"
         >
           <ul className="nav navbar-nav menu_nav ms-auto">
             <li className={`nav-item ${pathname === '/' ? 'active' : ''}`}>
-              <Link className="nav-link" href="/" style={{ fontWeight: '600' }}>
+              <Link className="nav-link" href="/" style={{ fontWeight: '600' }} onClick={closeMenu}>
                 Home
               </Link>
             </li>
             <li className={`nav-item ${pathname === '/about-us' ? 'active' : ''}`}>
-              <Link className="nav-link" href="/about-us" style={{ fontWeight: '600' }}>
+              <Link className="nav-link" href="/about-us" style={{ fontWeight: '600' }} onClick={closeMenu}>
                 About
               </Link>
             </li>
             <li className={`nav-item ${pathname === '/services' ? 'active' : ''}`}>
-              <Link className="nav-link" href="/services" style={{ fontWeight: '600' }}>
+              <Link className="nav-link" href="/services" style={{ fontWeight: '600' }} onClick={closeMenu}>
                 Services
               </Link>
             </li>
             <li className={`nav-item ${pathname === '/contact' ? 'active' : ''}`}>
-              <Link className="nav-link" href="/contact" style={{ fontWeight: '600' }}>
+              <Link className="nav-link" href="/contact" style={{ fontWeight: '600' }} onClick={closeMenu}>
                 Contact
               </Link>
             </li>

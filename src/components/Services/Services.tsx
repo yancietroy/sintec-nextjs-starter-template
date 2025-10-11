@@ -15,8 +15,13 @@ const Services = (props: Props) => {
             <div className="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="100" suppressHydrationWarning>
               <div className="single-service" style={{ border: '1px solid #e5e7eb', borderRadius: '16px' }}>
                 <div className="service-icon">
-                  <Image width={120} height={120} src="/images/reshot-icon-cleaning-cart-9PC5ZHTVL3.svg" alt="Standard Cleaning" />
-
+                  <Image
+                    width={120}
+                    height={120}
+                    src="/images/reshot-icon-cleaning-cart-9PC5ZHTVL3.svg"
+                    alt="Standard Cleaning"
+                    loading="lazy"
+                  />
                 </div>
                 <div className="service-content">
                   <h5>Standard Cleaning</h5>
@@ -32,7 +37,14 @@ const Services = (props: Props) => {
             <div className="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="200" suppressHydrationWarning>
               <div className="single-service" style={{ border: '1px solid #e5e7eb', borderRadius: '16px' }}>
                 <div className="service-icon">
-                  <Image width={92} height={92} src="/images/reshot-icon-cleaning-home-YFKCR4BTAP.svg" alt="Move-In/Move-Out Cleaning" style={{ marginTop: '20px' }} />
+                  <Image
+                    width={92}
+                    height={92}
+                    src="/images/reshot-icon-cleaning-home-YFKCR4BTAP.svg"
+                    alt="Move-In/Move-Out Cleaning"
+                    style={{ marginTop: '20px' }}
+                    loading="lazy"
+                  />
                 </div>
                 <div className="service-content">
                   <h5>Move-In/Move-Out Cleaning</h5>
@@ -48,7 +60,13 @@ const Services = (props: Props) => {
             <div className="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="300" suppressHydrationWarning>
               <div className="single-service" style={{ border: '1px solid #e5e7eb', borderRadius: '16px' }}>
                 <div className="service-icon">
-                  <Image width={120} height={120} src="/images/reshot-icon-cleaning-products-AMY9VLJQNG.svg" alt="Custom Cleaning Plans" />
+                  <Image
+                    width={120}
+                    height={120}
+                    src="/images/reshot-icon-cleaning-products-AMY9VLJQNG.svg"
+                    alt="Custom Cleaning Plans"
+                    loading="lazy"
+                  />
                 </div>
                 <div className="service-content">
                   <h5>Custom Cleaning Plans</h5>

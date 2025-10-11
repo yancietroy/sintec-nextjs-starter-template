@@ -208,11 +208,7 @@ button:focus {
   box-shadow: none;
 }
 
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1170px;
-  }
-}
+/* Container now managed in globals.css with Bootstrap 5 standards */
 
 img {
   max-width: 100%;

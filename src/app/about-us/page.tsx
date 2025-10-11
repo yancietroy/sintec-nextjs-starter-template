@@ -5,8 +5,14 @@ import Testimonials from '@/components/Testimonials/Testimonials';
 import Footer from '@/components/Footer/Footer';
 
 export const metadata = {
-  title: 'About Us - Sponge Pro Cleaning Services',
+  title: 'About Us',
   description: 'Learn more about Sponge Pro Cleaning Services and our professional cleaning solutions in Winnipeg, MB.',
+  alternates: {
+    canonical: 'https://www.spongeprocleaningservices.com/about-us',
+  },
+  openGraph: {
+    url: 'https://www.spongeprocleaningservices.com/about-us',
+  },
 }
 
 // Force static generation for instant navigation

@@ -1,6 +1,55 @@
-/* Container width override */
+/* Container width override - Industry standard 2025 (Bootstrap 5) */
 .container {
-  max-width: 1440px !important;
+  max-width: 1320px !important;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Increase padding on larger screens */
+@media (min-width: 768px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px !important;
+  }
 }
 
 /* Mobile Touch Optimizations */
@@ -86,4 +135,54 @@ textarea {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+/* Section spacing improvements - Industry standard 2025 */
+section.home_banner_area,
+section.about-area,
+section.service-area,
+section.contact-area,
+section.contact-section,
+section.number-area,
+section.application-section,
+section.privacy-policy-area {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 768px) {
+  section.home_banner_area,
+  section.about-area,
+  section.service-area,
+  section.contact-area,
+  section.contact-section,
+  section.number-area,
+  section.application-section,
+  section.privacy-policy-area {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  section.home_banner_area,
+  section.about-area,
+  section.service-area,
+  section.contact-area,
+  section.contact-section,
+  section.number-area,
+  section.application-section,
+  section.privacy-policy-area {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+/* Ensure form elements have proper spacing */
+.contact-area .form-contact {
+  width: 100%;
+}
+
+.contact-area .form-group {
+  margin-bottom: 20px;
 }

@@ -9,8 +9,8 @@ const Footer = (props: Props) => {
     <footer className="footer-area" style={{ backgroundColor: '#1e3a8a', color: '#ffffff', paddingTop: '50px', paddingBottom: '30px' }}>
         <div className="container">
           <div className="row" style={{ alignItems: 'center', textAlign: 'center' }}>
-            <div className="col-lg-3 col-md-6 col-sm-12 mb-4 mb-lg-0 footer-logo-col">
-              <div className="single-footer-widget" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+            <div className="col-lg-3 col-md-6 col-sm-12 mb-3 mb-lg-0 footer-logo-col">
+              <div className="single-footer-widget" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', marginBottom: '10px' }}>
                 <div className="footer-logo text-center">
                   <div style={{ position: 'relative', display: 'inline-block', width: '200px', height: '200px' }}>
                     <div style={{
@@ -42,8 +42,8 @@ const Footer = (props: Props) => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-6 col-md-6 col-sm-12 mb-4 mb-lg-0">
-              <div className="single-footer-widget" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+            <div className="col-lg-6 col-md-6 col-sm-12 mb-3 mb-lg-0">
+              <div className="single-footer-widget" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', marginBottom: '10px' }}>
                 {/* Quick Links Section */}
                 <div style={{ marginBottom: '12px' }}>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 20px', justifyContent: 'center' }}>
@@ -75,7 +75,7 @@ const Footer = (props: Props) => {
               </div>
             </div>
             <div className="col-lg-3 col-md-6 col-sm-12 footer-contact-col">
-              <div className="single-footer-widget" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+              <div className="single-footer-widget" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', marginBottom: '10px' }}>
                 {/* Business Hours */}
                 <div style={{ marginBottom: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
                   <i className="fa fa-clock-o" style={{ marginRight: '8px', color: '#ffffff', fontSize: '1rem', flexShrink: 0 }}></i>

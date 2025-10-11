@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useRef } from "react";
+import { FaHome, FaTabletAlt, FaEnvelope, FaBriefcase, FaInfoCircle } from 'react-icons/fa';
 
 type Props = {};
 
@@ -122,7 +123,7 @@ const ContactUs = (props: Props) => {
           <div className="col-lg-4">
             <div className="media contact-info">
               <span className="contact-info__icon">
-                <i className="ti-home"></i>
+                <FaHome />
               </span>
               <div className="media-body">
                 <h3>Winnipeg, Manitoba</h3>
@@ -131,7 +132,7 @@ const ContactUs = (props: Props) => {
             </div>
             <div className="media contact-info">
               <span className="contact-info__icon">
-                <i className="ti-tablet"></i>
+                <FaTabletAlt />
               </span>
               <div className="media-body">
                 <h3>
@@ -142,7 +143,7 @@ const ContactUs = (props: Props) => {
             </div>
             <div className="media contact-info">
               <span className="contact-info__icon">
-                <i className="ti-email"></i>
+                <FaEnvelope />
               </span>
               <div className="media-body">
                 <h3>
@@ -167,9 +168,9 @@ const ContactUs = (props: Props) => {
                 </div>
               </div>
               <div className="hours-note-contact mt-3 p-3" style={{ backgroundColor: '#f8f9fa', borderRadius: '8px', borderLeft: '4px solid #1e3a8a' }}>
-                <p className="mb-0" style={{ fontSize: '14px', color: '#6c757d' }}>
-                  <i className="ti-info-alt me-2" style={{ color: '#1e3a8a' }}></i>
-                  We offer flexible scheduling options on weekends to accommodate your busy lifestyle.
+                <p className="mb-0" style={{ fontSize: '14px', color: '#6c757d', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <FaInfoCircle style={{ color: '#1e3a8a', flexShrink: 0 }} />
+                  <span>We offer flexible scheduling options on weekends to accommodate your busy lifestyle.</span>
                 </p>
               </div>
             </div>
@@ -203,8 +204,9 @@ const ContactUs = (props: Props) => {
               flexDirection: 'column',
               justifyContent: 'center'
             }}>
-              <h3 className="mb-3" style={{ fontSize: '1.75rem', fontWeight: '700', color: '#1e3a8a' }}>
-                <i className="ti-briefcase me-2"></i>Join Us
+              <h3 className="mb-3" style={{ fontSize: '1.75rem', fontWeight: '700', color: '#1e3a8a', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <FaBriefcase />
+                <span>Join Us</span>
               </h3>
               <p style={{ fontSize: '1.05rem', lineHeight: '1.7', color: '#1a1a1a', marginBottom: '15px', fontWeight: '500' }}>
                 We&apos;re currently expanding our team.

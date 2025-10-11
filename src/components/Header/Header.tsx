@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useRef } from 'react'
+import React, { useRef, useCallback } from 'react'
 import TopNav from '../TopNav/TopNav'
 import MainMenu from '../MainMenu/MainMenu'
 import SearchBar from '../SearchBar/SearchBar'
@@ -12,7 +12,7 @@ const Header = (props: Props) => {
 
   const stickyRef = useRef<HTMLDivElement>(null);
 
-  useVerticalScrollEvent((evt:any) => {
+  const handleScroll = useCallback((evt: any) => {
     if (!stickyRef.current) return;
 
     if(evt.currentTarget.scrollY >= 172) {
@@ -23,8 +23,9 @@ const Header = (props: Props) => {
       stickyRef.current.classList.remove('navbar_fixed');
       return;
     }
+  }, []);
 
-  });
+  useVerticalScrollEvent(handleScroll);
 
   
   return (

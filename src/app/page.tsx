@@ -4,15 +4,18 @@ import HomeBanner from '@/components/HomeBanner/HomeBanner';
 import About from '@/components/About/About';
 import Services from '@/components/Services/Services';
 import Stats from '@/components/Stats/Stats';
-import Testimonials from '@/components/Testimonials/Testimonials';
-import Footer from '@/components/Footer/Footer';
-import AsyncStatsCounter from '@/components/AsyncStatsCounter/AsyncStatsCounter';
-import SuspenseWrapper from '@/components/SuspenseWrapper/SuspenseWrapper';
 import ContactSection from '@/components/ContactSection/ContactSection';
+import Footer from '@/components/Footer/Footer';
 
 export const metadata = {
   title: 'Sponge Pro Cleaning Services - Professional Cleaning in Winnipeg',
   description: 'Professional residential and commercial cleaning services in Winnipeg, MB. Trusted, reliable, and thorough cleaning solutions for your home or business.',
+  alternates: {
+    canonical: 'https://www.spongeprocleaningservices.com',
+  },
+  openGraph: {
+    url: 'https://www.spongeprocleaningservices.com',
+  },
 }
 
 // Force static generation for instant navigation

@@ -9,9 +9,15 @@ const Stats = (props: Props) => {
     <div className="container">
       <div className="row justify-content-center align-items-center" style={{ gap: '60px 0' }}>
         <div className="col-md-5 col-lg-5" data-aos="fade-right" suppressHydrationWarning>
-          <div className="number-img">
-            <Image width={555} height={740} src="/images/e3827998-2a41-490f-b25c-98bd4a176d3e.jpg" alt="Sponge Pro Cleaning Services" style={{ borderRadius: '20px' }} />
-
+          <div className="number-img" style={{ position: 'relative', width: '100%', height: 'auto', aspectRatio: '555/740' }}>
+            <Image
+              width={555}
+              height={740}
+              src="/images/e3827998-2a41-490f-b25c-98bd4a176d3e.jpg"
+              alt="Sponge Pro Cleaning Services"
+              style={{ borderRadius: '20px', width: '100%', height: 'auto', objectFit: 'cover' }}
+              loading="lazy"
+            />
           </div>
         </div>
         <div className="col-md-7 col-lg-6" data-aos="fade-left" suppressHydrationWarning>

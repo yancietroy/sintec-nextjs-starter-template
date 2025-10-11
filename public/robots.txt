@@ -1,0 +1,10 @@
+# robots.txt for Sponge Pro Cleaning Services
+# https://www.spongeprocleaningservices.com
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /privacy-policy
+
+# Sitemap
+Sitemap: https://www.spongeprocleaningservices.com/sitemap.xml
