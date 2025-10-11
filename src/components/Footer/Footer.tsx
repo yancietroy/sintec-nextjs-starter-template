@@ -9,7 +9,7 @@ const Footer = (props: Props) => {
     <footer className="footer-area" style={{ backgroundColor: '#1e3a8a', color: '#ffffff', paddingTop: '50px', paddingBottom: '30px' }}>
         <div className="container">
           <div className="row" style={{ alignItems: 'center', textAlign: 'center' }}>
-            <div className="col-lg-3 col-md-3">
+            <div className="col-lg-3 col-md-6 col-sm-12 mb-4 mb-lg-0 footer-logo-col">
               <div className="single-footer-widget" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
                 <div className="footer-logo text-center">
                   <div style={{ position: 'relative', display: 'inline-block', width: '200px', height: '200px' }}>
@@ -42,73 +42,74 @@ const Footer = (props: Props) => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-6 col-md-6">
+            <div className="col-lg-6 col-md-6 col-sm-12 mb-4 mb-lg-0">
               <div className="single-footer-widget" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
                 {/* Quick Links Section */}
-                <div style={{ marginBottom: '15px' }}>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px 30px', justifyContent: 'center' }}>
+                <div style={{ marginBottom: '12px' }}>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 20px', justifyContent: 'center' }}>
                     <div>
-                      <Link href="/" style={{ color: '#ffffff', textDecoration: 'none' }}>Home</Link>
+                      <Link href="/" className="footer-link" style={{ color: '#ffffff', textDecoration: 'none', padding: '8px 12px', display: 'inline-block' }}>Home</Link>
                     </div>
                     <div>
-                      <a href="/about-us" style={{ color: '#ffffff', textDecoration: 'none' }}>About</a>
+                      <a href="/about-us" className="footer-link" style={{ color: '#ffffff', textDecoration: 'none', padding: '8px 12px', display: 'inline-block' }}>About</a>
                     </div>
                     <div>
-                      <a href="/services" style={{ color: '#ffffff', textDecoration: 'none' }}>Services</a>
+                      <a href="/services" className="footer-link" style={{ color: '#ffffff', textDecoration: 'none', padding: '8px 12px', display: 'inline-block' }}>Services</a>
                     </div>
                     <div>
-                      <a href="/contact" style={{ color: '#ffffff', textDecoration: 'none' }}>Contact</a>
+                      <a href="/contact" className="footer-link" style={{ color: '#ffffff', textDecoration: 'none', padding: '8px 12px', display: 'inline-block' }}>Contact</a>
                     </div>
                     <div>
-                      <a href="/privacy-policy" style={{ color: '#ffffff', textDecoration: 'none' }}>Privacy</a>
+                      <a href="/privacy-policy" className="footer-link" style={{ color: '#ffffff', textDecoration: 'none', padding: '8px 12px', display: 'inline-block' }}>Privacy</a>
                     </div>
                   </div>
                 </div>
 
                 {/* Copyright Section */}
                 <div>
-                  <p style={{ color: '#ffffff', textAlign: 'center', margin: 0, fontSize: '0.9rem' }}>
+                  <p style={{ color: '#ffffff', textAlign: 'center', margin: 0, fontSize: '0.85rem', lineHeight: '1.4' }}>
                     Copyright &copy; 2025 Sponge Pro Cleaning Services. All rights reserved.
                   </p>
                 </div>
 
               </div>
             </div>
-            <div className="col-lg-3 col-md-3">
-              <div className="single-footer-widget" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', height: '100%' }}>
+            <div className="col-lg-3 col-md-6 col-sm-12 footer-contact-col">
+              <div className="single-footer-widget" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
                 {/* Business Hours */}
-                <div style={{ marginBottom: '15px', display: 'flex', alignItems: 'flex-start' }}>
-                  <i className="fa fa-clock-o" style={{ marginRight: '10px', color: '#ffffff', fontSize: '1.1rem', marginTop: '2px' }}></i>
-                  <div style={{ color: '#ffffff', fontSize: '1rem' }}>
+                <div style={{ marginBottom: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
+                  <i className="fa fa-clock-o" style={{ marginRight: '8px', color: '#ffffff', fontSize: '1rem', flexShrink: 0 }}></i>
+                  <div style={{ color: '#ffffff', fontSize: '0.9rem', lineHeight: '1.4' }}>
                     <div>Mon-Fri: 9am-5pm</div>
                     <div>Weekends: Flexible</div>
                   </div>
                 </div>
 
                 {/* Email */}
-                <div style={{ marginBottom: '15px', display: 'flex', alignItems: 'center' }}>
-                  <i className="fa fa-envelope" style={{ marginRight: '10px', color: '#ffffff', fontSize: '1.1rem' }}></i>
-                  <a href="mailto:info@spongeprocleaningservices.com" style={{ color: '#ffffff', textDecoration: 'none', fontSize: '1rem' }}>
-                    info@spongeprocleaningservices.com
+                <div style={{ marginBottom: '15px', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', minHeight: '44px', flexWrap: 'wrap' }}>
+                  <i className="fa fa-envelope" style={{ marginRight: '8px', color: '#ffffff', fontSize: '1rem' }}></i>
+                  <a href="mailto:admin@spongeprocleaningservices.com" className="footer-link" style={{ color: '#ffffff', textDecoration: 'none', fontSize: '0.9rem', padding: '10px 12px', wordBreak: 'break-word', lineHeight: '1.4' }}>
+                    admin@spongeprocleaningservices.com
                   </a>
                 </div>
 
                 {/* Phone */}
-                <div style={{ marginBottom: '15px', display: 'flex', alignItems: 'center' }}>
-                  <i className="fa fa-phone" style={{ marginRight: '10px', color: '#ffffff', fontSize: '1.1rem' }}></i>
-                  <a href="tel:+12045551234" style={{ color: '#ffffff', textDecoration: 'none', fontSize: '1rem' }}>
-                    (204) 555-1234
+                <div style={{ marginBottom: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', minHeight: '44px' }}>
+                  <i className="fa fa-phone" style={{ marginRight: '8px', color: '#ffffff', fontSize: '1rem' }}></i>
+                  <a href="tel:+12042028257" className="footer-link" style={{ color: '#ffffff', textDecoration: 'none', fontSize: '0.95rem', padding: '10px 12px' }}>
+                    +1-204 202 8257
                   </a>
                 </div>
 
                 {/* Facebook */}
-                <div style={{ display: 'flex', alignItems: 'center' }}>
-                  <i className="fa fa-facebook" style={{ marginRight: '10px', color: '#ffffff', fontSize: '1.1rem' }}></i>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', minHeight: '44px' }}>
+                  <i className="fa fa-facebook" style={{ marginRight: '8px', color: '#ffffff', fontSize: '1rem' }}></i>
                   <a
                     href="https://www.facebook.com/profile.php?id=61559035156842"
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ color: '#ffffff', textDecoration: 'none', fontSize: '1rem' }}
+                    className="footer-link"
+                    style={{ color: '#ffffff', textDecoration: 'none', fontSize: '0.95rem', padding: '10px 12px' }}
                   >
                     Follow us on Facebook
                   </a>

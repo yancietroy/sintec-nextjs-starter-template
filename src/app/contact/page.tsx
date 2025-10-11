@@ -7,6 +7,9 @@ export const metadata = {
   description: 'Get in touch with Sponge Pro Cleaning Services for a free quote on residential or commercial cleaning in Winnipeg.',
 }
 
+// Force static generation for instant navigation
+export const dynamic = 'force-static'
+
 export default function ContactPage() {
   return (
     <>

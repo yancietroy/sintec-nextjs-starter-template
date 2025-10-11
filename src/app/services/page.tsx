@@ -9,6 +9,9 @@ export const metadata = {
   description: 'Discover our comprehensive range of professional cleaning services for residential and commercial properties in Winnipeg.',
 }
 
+// Force static generation for instant navigation
+export const dynamic = 'force-static'
+
 export default function ServicesPage() {
   return (
     <>

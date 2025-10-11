@@ -7,6 +7,9 @@ export const metadata = {
   description: 'Join our team at Sponge Pro Cleaning Services. Apply for part-time cleaning positions in Winnipeg.',
 }
 
+// Force static generation for instant navigation
+export const dynamic = 'force-static'
+
 export default function ApplyPage() {
   return (
     <>

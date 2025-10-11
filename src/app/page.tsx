@@ -15,6 +15,9 @@ export const metadata = {
   description: 'Professional residential and commercial cleaning services in Winnipeg, MB. Trusted, reliable, and thorough cleaning solutions for your home or business.',
 }
 
+// Force static generation for instant navigation
+export const dynamic = 'force-static'
+
 export default function HomePage() {
   return (
     <>

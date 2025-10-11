@@ -67,11 +67,23 @@
 	============================================================================================ */
 	.navbar-toggler {
 		border: none;
-		border-radius: 0px;
-		padding: 0px;
+		border-radius: 4px;
+		padding: 12px;
 		cursor: pointer;
-		margin-top: 27px;
-		margin-bottom: 23px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		width: 48px;
+		height: 48px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background: transparent;
+		position: relative;
+	}
+	.navbar-toggler:focus {
+		outline: 2px solid #1e3a8a;
+		outline-offset: 2px;
 	}
 	.header_area .navbar {
 		background: #fff;
@@ -84,23 +96,28 @@
 	}
 	.navbar-toggler[aria-expanded="true"] span:first-child {
 		transform: rotate(-45deg);
-		position: relative;
-		top: 7.5px;
+		position: absolute;
+		top: 50%;
+		margin-top: -1.5px;
 	}
 	.navbar-toggler[aria-expanded="true"] span:last-child {
 		transform: rotate(45deg);
-		bottom: 6px;
-		position: relative;
+		position: absolute;
+		top: 50%;
+		margin-top: -1.5px;
 	}
 	.navbar-toggler span{
 		display: block;
-		width: 25px;
+		width: 24px;
 		height: 3px;
-		background: #e22104;
-		margin: auto;
-		margin-bottom: 4px;
-		transition: all 400ms linear;
+		background: #1e3a8a;
+		margin-bottom: 5px;
+		transition: all 300ms ease;
 		cursor: pointer;
+		border-radius: 2px;
+	}
+	.navbar-toggler span:last-child {
+		margin-bottom: 0;
 	}
 	.navbar .container{
 		padding-left: 15px;
@@ -110,33 +127,38 @@
 		padding: 0px 0px;
 	}
 	.header_area + section, .header_area + row, .header_area + div {
-		margin-top: 117px;
+		margin-top: 90px;
 	}
 	.header_area .navbar .nav .nav-item .nav-link{
-		line-height: 40px;
+		line-height: 1.5;
 		margin-right: 0px;
 		display: block;
-		border-bottom: 1px solid #ededed33;
+		padding: 16px 20px !important;
+		border-bottom: 1px solid #e5e7eb;
 		border-radius: 0px;
+		font-size: 16px !important;
+		min-height: 56px;
+		display: flex;
+		align-items: center;
 	}
 	.header_area.navbar_fixed .main_menu .navbar .nav .nav-item .nav-link {
-		line-height: 40px;
+		line-height: 1.5;
 	}
 	.header_area .navbar .search{
 		margin-left: 0px;
 	}
 	.header_area .navbar-collapse{
-		max-height: 340px;
-		overflow-y: scroll;
+		max-height: none;
+		overflow-y: visible;
 	}
 	.header_area .navbar .nav .nav-item.submenu ul .nav-item .nav-link {
-		padding: 0px 15px;
+		padding: 16px 20px !important;
 	}
 	.header_area .navbar .nav .nav-item {
 		margin-right: 0px;
 	}
-	.header_area + section, .header_area + row, .header_area + div {
-		margin-top: 116px;
+	.header_area .navbar .nav .nav-item:last-child .nav-link {
+		border-bottom: none;
 	}
 	/* End Main Menu Area css
 	============================================================================================ */
@@ -204,7 +226,7 @@
 @media (max-width:767px){
 
 	.header_area + section, .header_area + row, .header_area + div {
-		margin-top: 80px;
+		margin-top: 75px;
 	}
 
 
@@ -262,10 +284,35 @@
 }
 @media (max-width:575px){
 	.top_menu {
-		display: none;
+		background: #1e3a8a;
+		padding: 8px 0;
+	}
+	.top_menu .float-start,
+	.top_menu .float-end span {
+		display: none !important;
+	}
+	.top_menu .float-end {
+		float: none !important;
+		text-align: center;
+		width: 100%;
+	}
+	.top_menu .float-end a.dn_btn {
+		display: inline-block !important;
+		color: #fff !important;
+		font-size: 16px;
+		font-weight: 600;
+		text-decoration: none;
+		padding: 4px 12px;
+		border-radius: 4px;
+	}
+	.top_menu .float-end a.dn_btn:hover {
+		background: rgba(255, 255, 255, 0.1);
+	}
+	.top_menu .float-end a.dn_btn i {
+		margin-right: 8px;
 	}
 	.header_area + section, .header_area + row, .header_area + div {
-		margin-top: 71px;
+		margin-top: 85px;
 	}
     /* Home Banner Area css
     ============================================================================================ */
@@ -342,7 +389,7 @@
 	/* Main Menu Area css
 	============================================================================================ */
 	.header_area .navbar-collapse{
-		max-height: 280px;
+		max-height: none;
 	}
 	/* End Main Menu Area css
 	============================================================================================ */
@@ -369,4 +416,207 @@
 	
 	/* End Blog Page Area css
 	============================================================================================ */
+}
+
+/* Join Us Card - Desktop height matches map */
+@media (min-width: 992px) {
+	.join-us-card {
+		height: 450px !important;
+	}
+}
+
+/* Map responsive height on mobile/tablet */
+@media (max-width: 991px) {
+	.contact-section iframe {
+		height: 350px !important;
+	}
+}
+
+@media (max-width: 575px) {
+	.contact-section iframe {
+		height: 300px !important;
+	}
+
+	.button-contactForm {
+		width: 100% !important;
+	}
+
+	/* Hero buttons full width on mobile */
+	.hero-buttons {
+		flex-direction: column !important;
+	}
+
+	.hero-buttons .btn {
+		width: 100% !important;
+	}
+
+	/* Responsive logo text */
+	.brand-text {
+		font-size: 0.9rem !important;
+		line-height: 1.2 !important;
+		max-width: 180px;
+	}
+
+	.navbar-brand.logo_h {
+		height: auto !important;
+		line-height: normal !important;
+		padding: 10px 0 !important;
+	}
+}
+
+/* Logo text for tablets */
+@media (max-width: 991px) and (min-width: 576px) {
+	.brand-text {
+		font-size: 1.2rem !important;
+	}
+}
+
+/* Privacy Policy mobile styles */
+@media (max-width: 767px) {
+	.privacy-policy-area .privacy-content h3 {
+		font-size: 1.5rem !important;
+		margin-top: 30px;
+		margin-bottom: 15px;
+	}
+
+	.privacy-policy-area .privacy-content p,
+	.privacy-policy-area .privacy-content li {
+		font-size: 0.95rem !important;
+		line-height: 1.7;
+	}
+
+	.privacy-policy-area .contact-details {
+		padding: 15px !important;
+	}
+
+	.privacy-policy-area .contact-details h4 {
+		font-size: 1.25rem !important;
+	}
+
+	.privacy-policy-area .thank-you h4 {
+		font-size: 1.1rem !important;
+	}
+
+	/* Footer mobile optimizations */
+	.footer-area {
+		padding-top: 30px !important;
+		padding-bottom: 20px !important;
+	}
+
+	/* Footer logo size for mobile - much smaller */
+	.footer-logo-col .footer-logo > div {
+		width: 80px !important;
+		height: 80px !important;
+	}
+
+	.footer-logo-col .footer-logo > div > div {
+		width: 60px !important;
+		height: 60px !important;
+		left: 10px !important;
+		top: 10px !important;
+	}
+
+	/* Reorder footer sections: logo first (industry standard) */
+	.footer-logo-col {
+		order: 1;
+		margin-bottom: 6px !important;
+	}
+
+	.footer-contact-col {
+		order: 3;
+		margin-bottom: 0 !important;
+	}
+
+	.footer-area .row > div:nth-child(2) {
+		order: 2;
+		margin-bottom: 10px !important;
+	}
+
+	/* Compact footer items on mobile */
+	.footer-contact-col .single-footer-widget > div {
+		margin-bottom: 10px !important;
+	}
+
+	.footer-contact-col .single-footer-widget > div:last-child {
+		margin-bottom: 0 !important;
+	}
+
+	/* Reduce footer font sizes on mobile */
+	.footer-area {
+		font-size: 0.875rem !important;
+	}
+
+	.footer-area i {
+		font-size: 1rem !important;
+	}
+}
+
+/* Mobile-specific footer improvements for very small screens */
+@media (max-width: 575px) {
+	.footer-area {
+		padding-top: 25px !important;
+		padding-bottom: 15px !important;
+	}
+
+	/* Even smaller logo on very small screens */
+	.footer-logo-col .footer-logo > div {
+		width: 70px !important;
+		height: 70px !important;
+	}
+
+	.footer-logo-col .footer-logo > div > div {
+		width: 52.5px !important;
+		height: 52.5px !important;
+		left: 8.75px !important;
+		top: 8.75px !important;
+	}
+
+	/* Compact spacing - logo first */
+	.footer-logo-col {
+		margin-bottom: 4px !important;
+	}
+
+	.footer-contact-col {
+		margin-bottom: 0 !important;
+	}
+
+	.footer-area .row > div:nth-child(2) {
+		margin-bottom: 8px !important;
+	}
+
+	/* Smaller copyright text */
+	.footer-area p {
+		font-size: 0.8rem !important;
+	}
+}
+
+/* Footer hover states for all screen sizes */
+.footer-link {
+	transition: all 0.3s ease;
+	border-radius: 4px;
+}
+
+.footer-link:hover {
+	background-color: rgba(255, 255, 255, 0.1) !important;
+	transform: translateY(-2px);
+}
+
+.footer-link:active {
+	transform: translateY(0);
+	background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Footer responsive improvements for tablets */
+@media (max-width: 991px) {
+	.footer-logo-col .footer-logo > div {
+		width: 150px !important;
+		height: 150px !important;
+	}
+
+	.footer-logo-col .footer-logo > div > div {
+		width: 112.5px !important;
+		height: 112.5px !important;
+		left: 18.75px !important;
+		top: 18.75px !important;
+	}
 }

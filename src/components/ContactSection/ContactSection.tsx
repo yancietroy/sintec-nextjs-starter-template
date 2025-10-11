@@ -39,8 +39,8 @@ const ContactSection = (props: Props) => {
             <div className="section-title text-center mb-5">
               <h2 style={{ color: '#000000', fontSize: 'clamp(2rem, 4vw, 2.5rem)', marginBottom: '20px' }}>Request a Quote</h2>
               <p style={{ fontSize: '1.1rem', lineHeight: '1.7', color: '#6c757d' }}>
-                Tell us about your space — and we'll provide a quote tailored to your cleaning needs and schedule.
-                Whether it's your home or business, we're here to help make your space spotless.
+                Tell us about your space — and we&apos;ll provide a quote tailored to your cleaning needs and schedule.
+                Whether it&apos;s your home or business, we&apos;re here to help make your space spotless.
               </p>
             </div>
             <form
@@ -131,7 +131,7 @@ const ContactSection = (props: Props) => {
                 <i className="ti-briefcase me-2"></i>Join Us
               </h3>
               <p style={{ fontSize: '1.05rem', lineHeight: '1.7', color: '#1a1a1a', marginBottom: '15px', fontWeight: '500' }}>
-                We're currently expanding our team.
+                We&apos;re currently expanding our team.
               </p>
               <p style={{ fontSize: '0.95rem', lineHeight: '1.7', color: '#6c757d', marginBottom: '25px' }}>
                 Interested in joining us? Learn more about our process and flexible scheduling.

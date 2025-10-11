@@ -3,6 +3,60 @@
   max-width: 1440px !important;
 }
 
+/* Mobile Touch Optimizations */
+button,
+a,
+input,
+select,
+textarea,
+.nav-link,
+.btn {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(30, 58, 138, 0.1);
+}
+
+/* Ensure minimum touch target sizes */
+button,
+.btn,
+.button,
+.nav-link,
+a.btn {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Form controls minimum height for better touch targets */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+select,
+textarea {
+  min-height: 48px;
+  font-size: 16px; /* Prevents zoom on iOS */
+}
+
+textarea {
+  min-height: 100px;
+}
+
+/* Better tap areas for navigation */
+.navbar .nav-link {
+  padding: 12px 16px !important;
+  min-height: 48px;
+}
+
+@media (max-width: 991px) {
+  .navbar .nav-link {
+    min-height: 48px;
+    padding: 14px 16px !important;
+  }
+}
+
 /* Hero button styles */
 .hero-btn-primary {
   background-color: #1e3a8a;

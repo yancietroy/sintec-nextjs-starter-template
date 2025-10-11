@@ -6,6 +6,9 @@ export const metadata = {
   description: 'Privacy Policy for Sponge Pro Cleaning Services. Learn how we collect, use, and protect your personal information.',
 }
 
+// Force static generation for instant navigation
+export const dynamic = 'force-static'
+
 export default function PrivacyPolicyPage() {
   return (
     <>
@@ -13,8 +16,9 @@ export default function PrivacyPolicyPage() {
       <section className="privacy-policy-area area-padding">
         <div className="container">
           <div className="row">
-            <div className="col-lg-12">
-              <div className="privacy-content">
+            <div className="col-lg-10 mx-auto">
+              <div className="privacy-content" style={{ padding: '0 clamp(15px, 3vw, 30px)' }}>
+                <h1 style={{ fontSize: 'clamp(2rem, 4vw, 2.5rem)', fontWeight: '800', marginBottom: '30px', textAlign: 'center' }}>Privacy Policy</h1>
 
                 <h3>Introduction</h3>
                 <p>

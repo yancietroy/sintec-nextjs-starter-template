@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -9,6 +9,29 @@ type Props = {}
 
 const MainMenu = (props: Props) => {
   const pathname = usePathname();
+
+  useEffect(() => {
+    // Close mobile menu when clicking on nav links
+    const navLinks = document.querySelectorAll('.navbar-collapse .nav-link');
+    const navbarCollapse = document.getElementById('navbarSupportedContent');
+    const navbarToggler = document.querySelector('.navbar-toggler');
+
+    const handleClick = () => {
+      if (navbarCollapse?.classList.contains('show')) {
+        navbarToggler?.dispatchEvent(new Event('click', { bubbles: true }));
+      }
+    };
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', handleClick);
+    });
+
+    return () => {
+      navLinks.forEach(link => {
+        link.removeEventListener('click', handleClick);
+      });
+    };
+  }, []);
 
   return (
     <div className="main_menu">
@@ -20,9 +43,9 @@ const MainMenu = (props: Props) => {
             alt="Sponge Pro Cleaning Services"
             width={50}
             height={50}
-            style={{ height: 'auto', marginRight: '10px' }}
+            style={{ height: 'auto', marginRight: '10px', flexShrink: 0 }}
           />
-          <span style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#1e3a8a', textTransform: 'capitalize' }}>
+          <span className="brand-text" style={{ fontWeight: 'bold', color: '#1e3a8a', textTransform: 'capitalize' }}>
             sponge pro cleaning services
           </span>
         </Link>

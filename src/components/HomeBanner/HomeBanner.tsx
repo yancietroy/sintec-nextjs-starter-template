@@ -9,7 +9,7 @@ const HomeBanner = (props: Props) => {
       <div className="container">
         <div className="row align-items-center" style={{ gap: '40px 0' }}>
           <div className="col-lg-6">
-            <div className="banner_content" style={{ paddingRight: '40px' }}>
+            <div className="banner_content" style={{ paddingRight: 'clamp(0px, 3vw, 40px)' }}>
               <h1 style={{
                 fontSize: 'clamp(2.5rem, 5vw, 3.5rem)',
                 fontWeight: '800',
@@ -28,7 +28,7 @@ const HomeBanner = (props: Props) => {
                 fontWeight: '600',
                 fontStyle: 'italic'
               }}>
-                We don't cut corners, we clean them!
+                We don&apos;t cut corners, we clean them!
               </p>
               <p style={{
                 fontSize: 'clamp(1rem, 1.5vw, 1.125rem)',
@@ -39,7 +39,7 @@ const HomeBanner = (props: Props) => {
               }}>
                 Trusted by homes and businesses across Winnipeg for residential and commercial cleaning services that exceed expectations.
               </p>
-              <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
+              <div className="hero-buttons" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
                 <a
                   className="btn btn-lg hero-btn-primary"
                   href="/contact"
@@ -61,7 +61,7 @@ const HomeBanner = (props: Props) => {
             <div style={{
               position: 'relative',
               width: '100%',
-              height: '500px',
+              height: 'clamp(300px, 60vw, 500px)',
               borderRadius: '20px',
               overflow: 'hidden',
               boxShadow: '0 20px 60px rgba(0, 0, 0, 0.15)'

@@ -173,19 +173,52 @@ const ContactUs = (props: Props) => {
                 </p>
               </div>
             </div>
+
           </div>
         </div>
 
-        <div className="d-none d-sm-block mt-5 pt-4">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2571.8434727883!2d-97.2019435!3d49.8954327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ea73fa4b2d6d3b%3A0x8f8f8f8f8f8f8f8f!2sR3G%202H5%2C%20Winnipeg%2C%20MB%2C%20Canada!5e0!3m2!1sen!2sca!4v1735378800000!5m2!1sen!2sca"
-            width="100%"
-            height="450"
-            style={{ border: 0, borderRadius: '12px' }}
-            allowFullScreen={true}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+        <div className="row mt-5 pt-4">
+          <div className="col-lg-8 mb-4 mb-lg-0">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2571.8434727883!2d-97.2019435!3d49.8954327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ea73fa4b2d6d3b%3A0x8f8f8f8f8f8f8f8f!2sR3G%202H5%2C%20Winnipeg%2C%20MB%2C%20Canada!5e0!3m2!1sen!2sca!4v1735378800000!5m2!1sen!2sca"
+              width="100%"
+              height="450"
+              style={{
+                border: 0,
+                borderRadius: '12px',
+                minHeight: '300px'
+              }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div className="col-lg-4">
+            <div className="join-us-card" style={{
+              padding: '35px',
+              backgroundColor: '#ffffff',
+              borderRadius: '16px',
+              border: '2px solid #e5e7eb',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center'
+            }}>
+              <h3 className="mb-3" style={{ fontSize: '1.75rem', fontWeight: '700', color: '#1e3a8a' }}>
+                <i className="ti-briefcase me-2"></i>Join Us
+              </h3>
+              <p style={{ fontSize: '1.05rem', lineHeight: '1.7', color: '#1a1a1a', marginBottom: '15px', fontWeight: '500' }}>
+                We&apos;re currently expanding our team.
+              </p>
+              <p style={{ fontSize: '0.95rem', lineHeight: '1.7', color: '#6c757d', marginBottom: '25px' }}>
+                Interested in joining us? Learn more about our process and flexible scheduling.
+              </p>
+              <a href="/apply" className="btn btn-md hero-btn-primary" style={{
+                padding: '12px 28px'
+              }}>
+                Apply Now
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

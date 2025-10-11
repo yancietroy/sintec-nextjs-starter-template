@@ -9,6 +9,9 @@ export const metadata = {
   description: 'Learn more about Sponge Pro Cleaning Services and our professional cleaning solutions in Winnipeg, MB.',
 }
 
+// Force static generation for instant navigation
+export const dynamic = 'force-static'
+
 export default function AboutPage() {
   return (
     <>

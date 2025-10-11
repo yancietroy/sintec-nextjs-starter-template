@@ -12,7 +12,7 @@ const JoinUs = (props: Props) => {
               Join Us
             </h2>
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#6c757d', marginBottom: '30px' }}>
-              We're currently expanding our team.
+              We&apos;re currently expanding our team.
             </p>
             <p style={{ fontSize: '1rem', lineHeight: '1.8', color: '#6c757d', marginBottom: '40px' }}>
               Interested in joining us? Learn more about our process, and flexible scheduling. Currently hiring for part-time positions.

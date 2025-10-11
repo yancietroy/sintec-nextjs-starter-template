@@ -15,7 +15,7 @@ const Stats = (props: Props) => {
           </div>
         </div>
         <div className="col-md-7 col-lg-6" data-aos="fade-left" suppressHydrationWarning>
-          <div className="number-content" style={{ paddingLeft: '60px' }}>
+          <div className="number-content" style={{ padding: '0 clamp(0px, 3vw, 60px)' }}>
             <h4 style={{ color: '#fff', fontSize: 'clamp(1.75rem, 3.5vw, 2rem)', fontWeight: '800', marginBottom: '30px', lineHeight: '1.3' }}>
               Providing Personalized And <br />
               High Quality Service
