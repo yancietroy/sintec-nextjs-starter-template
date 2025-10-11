@@ -52,39 +52,49 @@ const ContactUs = (props: Props) => {
               <div className="row">
                 <div className="col-sm-6">
                   <div className="form-group">
+                    <label htmlFor="name" className="visually-hidden">Name</label>
                     <input
                       className="form-control"
                       name="name"
                       id="name"
                       type="text"
                       placeholder="Enter your name"
+                      required
+                      aria-required="true"
                     />
                   </div>
                 </div>
                 <div className="col-sm-6">
                   <div className="form-group">
+                    <label htmlFor="email" className="visually-hidden">Email</label>
                     <input
                       className="form-control"
                       name="email"
                       id="email"
                       type="email"
                       placeholder="Enter email address"
+                      required
+                      aria-required="true"
                     />
                   </div>
                 </div>
                 <div className="col-12">
                   <div className="form-group">
+                    <label htmlFor="subject" className="visually-hidden">Subject</label>
                     <input
                       className="form-control"
                       name="subject"
                       id="subject"
                       type="text"
                       placeholder="Enter Subject"
+                      required
+                      aria-required="true"
                     />
                   </div>
                 </div>
                 <div className="col-12">
                   <div className="form-group">
+                    <label htmlFor="message" className="visually-hidden">Message</label>
                     <textarea
                       className="form-control w-100"
                       name="message"
@@ -92,6 +102,8 @@ const ContactUs = (props: Props) => {
                       cols={30}
                       rows={9}
                       placeholder="Enter Message"
+                      required
+                      aria-required="true"
                     ></textarea>
                     <small style={{ display: 'block', marginTop: '8px', color: '#888', fontStyle: 'italic' }}>
                       We take customer privacy seriously and do not sell or give out any customer information.

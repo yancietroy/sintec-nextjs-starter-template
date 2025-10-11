@@ -61,9 +61,11 @@ const ApplicationForm = (props: Props) => {
                     <input
                       className="form-control"
                       name="firstName"
+                      id="firstName"
                       type="text"
                       placeholder="First Name"
                       required
+                      aria-required="true"
                       style={{ padding: '12px 16px', borderRadius: '8px', border: '1px solid #e5e7eb' }}
                     />
                   </div>
@@ -73,9 +75,11 @@ const ApplicationForm = (props: Props) => {
                     <input
                       className="form-control"
                       name="lastName"
+                      id="lastName"
                       type="text"
                       placeholder="Last Name"
                       required
+                      aria-required="true"
                       style={{ padding: '12px 16px', borderRadius: '8px', border: '1px solid #e5e7eb' }}
                     />
                   </div>
@@ -83,15 +87,17 @@ const ApplicationForm = (props: Props) => {
 
                 <div className="col-12">
                   <div className="form-group mb-4">
-                    <label style={{ fontWeight: '600', marginBottom: '8px', display: 'block', color: '#1a1a1a' }}>
+                    <label htmlFor="email" style={{ fontWeight: '600', marginBottom: '8px', display: 'block', color: '#1a1a1a' }}>
                       Email <span style={{ color: '#dc3545' }}>*</span>
                     </label>
                     <input
                       className="form-control"
                       name="email"
+                      id="email"
                       type="email"
                       placeholder="Enter your email"
                       required
+                      aria-required="true"
                       style={{ padding: '12px 16px', borderRadius: '8px', border: '1px solid #e5e7eb' }}
                     />
                   </div>
@@ -99,15 +105,17 @@ const ApplicationForm = (props: Props) => {
 
                 <div className="col-12">
                   <div className="form-group mb-4">
-                    <label style={{ fontWeight: '600', marginBottom: '8px', display: 'block', color: '#1a1a1a' }}>
+                    <label htmlFor="phone" style={{ fontWeight: '600', marginBottom: '8px', display: 'block', color: '#1a1a1a' }}>
                       Phone <span style={{ color: '#dc3545' }}>*</span>
                     </label>
                     <input
                       className="form-control"
                       name="phone"
+                      id="phone"
                       type="tel"
                       placeholder="Enter your phone number"
                       required
+                      aria-required="true"
                       style={{ padding: '12px 16px', borderRadius: '8px', border: '1px solid #e5e7eb' }}
                     />
                   </div>
@@ -115,15 +123,17 @@ const ApplicationForm = (props: Props) => {
 
                 <div className="col-12">
                   <div className="form-group mb-4">
-                    <label style={{ fontWeight: '600', marginBottom: '8px', display: 'block', color: '#1a1a1a' }}>
+                    <label htmlFor="resume_link" style={{ fontWeight: '600', marginBottom: '8px', display: 'block', color: '#1a1a1a' }}>
                       Resume Link <span style={{ color: '#dc3545' }}>*</span>
                     </label>
                     <input
                       className="form-control"
                       name="resume_link"
+                      id="resume_link"
                       type="url"
                       placeholder="Paste link to your resume (Google Drive, Dropbox, OneDrive, etc.)"
                       required
+                      aria-required="true"
                       style={{ padding: '12px 16px', borderRadius: '8px', border: '1px solid #e5e7eb' }}
                     />
                     <small style={{ display: 'block', marginTop: '8px', color: '#6c757d' }}>
@@ -134,15 +144,17 @@ const ApplicationForm = (props: Props) => {
 
                 <div className="col-12">
                   <div className="form-group mb-4">
-                    <label style={{ fontWeight: '600', marginBottom: '8px', display: 'block', color: '#1a1a1a' }}>
+                    <label htmlFor="message" style={{ fontWeight: '600', marginBottom: '8px', display: 'block', color: '#1a1a1a' }}>
                       Message <span style={{ color: '#dc3545' }}>*</span>
                     </label>
                     <textarea
                       className="form-control"
                       name="message"
+                      id="message"
                       rows={6}
                       placeholder="Describe your past experience with cleaning & the skills you possess."
                       required
+                      aria-required="true"
                       style={{ padding: '12px 16px', borderRadius: '8px', border: '1px solid #e5e7eb' }}
                     ></textarea>
                   </div>

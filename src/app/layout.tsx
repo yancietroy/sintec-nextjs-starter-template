@@ -36,7 +36,7 @@ export const metadata = {
     description: 'Professional cleaning services in Winnipeg, MB. Residential and commercial cleaning solutions you can trust.',
     images: [
       {
-        url: '/images/volodymyr-hryshchenko-WU9dA3C4R28-unsplash.jpg',
+        url: '/images/152a815e-685b-4f82-b3f2-eb526ddb7c7f.jpeg',
         width: 1200,
         height: 630,
         alt: 'Sponge Pro Cleaning Services - Professional Cleaning',
@@ -49,7 +49,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Sponge Pro Cleaning Services - Professional Cleaning in Winnipeg',
     description: 'Professional cleaning services in Winnipeg, MB. Residential and commercial cleaning solutions you can trust.',
-    images: ['/images/volodymyr-hryshchenko-WU9dA3C4R28-unsplash.jpg'],
+    images: ['/images/152a815e-685b-4f82-b3f2-eb526ddb7c7f.jpeg'],
   },
 
   // Icons
