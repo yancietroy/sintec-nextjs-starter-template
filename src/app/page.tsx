@@ -20,7 +20,7 @@ export const metadata = {
     url: 'https://www.spongeprocleaningservices.com',
     images: [
       {
-        url: 'https://www.spongeprocleaningservices.com/images/og-image.jpg',
+        url: 'https://www.spongeprocleaningservices.com/images/OPENGRAPH.png',
         width: 1200,
         height: 630,
         alt: 'Sponge Pro Cleaning Services - Professional Cleaning',
@@ -30,7 +30,7 @@ export const metadata = {
   twitter: {
     title: 'Sponge Pro Cleaning Services | Winnipeg Cleaners',
     description: 'Expert residential & commercial cleaning in Winnipeg, MB. Trusted, reliable service for homes and businesses. Free quotes available today.',
-    images: ['https://www.spongeprocleaningservices.com/images/og-image.jpg'],
+    images: ['https://www.spongeprocleaningservices.com/images/OPENGRAPH.png'],
   },
 }
 

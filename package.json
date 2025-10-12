@@ -19,6 +19,7 @@
     "aos": "^2.3.4",
     "autoprefixer": "^10.4.21",
     "bootstrap": "^5.3.8",
+    "clsx": "^2.1.1",
     "embla-carousel-react": "^8.6.0",
     "eslint": "^9.36.0",
     "eslint-config-next": "^15.5.4",

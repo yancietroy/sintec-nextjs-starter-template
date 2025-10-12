@@ -11,7 +11,22 @@ export const metadata = {
     canonical: 'https://www.spongeprocleaningservices.com/about-us',
   },
   openGraph: {
+    title: 'About Us | Sponge Pro Cleaning Services',
+    description: 'Learn more about Sponge Pro Cleaning Services and our professional cleaning solutions in Winnipeg, MB.',
     url: 'https://www.spongeprocleaningservices.com/about-us',
+    images: [
+      {
+        url: 'https://www.spongeprocleaningservices.com/images/OPENGRAPH.png',
+        width: 1200,
+        height: 630,
+        alt: 'Sponge Pro Cleaning Services - Professional Cleaning',
+      }
+    ],
+  },
+  twitter: {
+    title: 'About Us | Sponge Pro Cleaning Services',
+    description: 'Learn more about Sponge Pro Cleaning Services and our professional cleaning solutions in Winnipeg, MB.',
+    images: ['https://www.spongeprocleaningservices.com/images/OPENGRAPH.png'],
   },
 }
 
