@@ -14,7 +14,7 @@ const ContactUs = (props: Props) => {
     setResult("Sending....");
     const formData = new FormData(event.currentTarget);
 
-    formData.append("access_key", "35f51f8d-ae9f-46dd-9456-041051c25016");
+    formData.append("access_key", "cfd29dbd-d912-4b5e-8b3b-f4ceeec59fbe");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -41,6 +41,12 @@ const ContactUs = (props: Props) => {
             <p style={{ fontSize: '1.1rem', lineHeight: '1.7', color: '#6c757d', maxWidth: '700px', margin: '0 auto' }}>
               Send us a message for quotes or inquiries.
             </p>
+            <div className="mt-3">
+              <p style={{ fontSize: '0.95rem', color: '#6c757d' }}>
+                Need to speak with us? <a href="tel:+12042028257" style={{ color: '#1e3a8a', fontWeight: '600' }}>Call +1-204 202 8257</a> or{' '}
+                <a href="/book" style={{ color: '#1e3a8a', fontWeight: '600' }}>book a consultation online</a>
+              </p>
+            </div>
           </div>
           <div className="col-lg-8">
             <form

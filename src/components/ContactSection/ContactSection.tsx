@@ -13,7 +13,7 @@ const ContactSection = (props: Props) => {
     setResult("Sending....");
     const formData = new FormData(event.currentTarget);
 
-    formData.append("access_key", "35f51f8d-ae9f-46dd-9456-041051c25016");
+    formData.append("access_key", "cfd29dbd-d912-4b5e-8b3b-f4ceeec59fbe");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -42,6 +42,12 @@ const ContactSection = (props: Props) => {
                 Tell us about your space — and we&apos;ll provide a quote tailored to your cleaning needs and schedule.
                 Whether it&apos;s your home or business, we&apos;re here to help make your space spotless.
               </p>
+              <div className="mt-3">
+                <p style={{ fontSize: '0.95rem', color: '#6c757d', marginBottom: '12px' }}>
+                  Prefer to talk? <a href="tel:+12042028257" style={{ color: '#1e3a8a', fontWeight: '600' }}>Call us at +1-204 202 8257</a> or{' '}
+                  <a href="/book" style={{ color: '#1e3a8a', fontWeight: '600' }}>schedule a consultation</a>
+                </p>
+              </div>
             </div>
             <form
               ref={formRef}

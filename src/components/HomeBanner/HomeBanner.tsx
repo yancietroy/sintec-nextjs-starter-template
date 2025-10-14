@@ -49,10 +49,10 @@ const HomeBanner = (props: Props) => {
                 </a>
                 <a
                   className="btn btn-lg hero-btn-outline"
-                  href="/services"
+                  href="/book"
                   style={{ padding: '14px 32px' }}
                 >
-                  Our Services
+                  Book Consultation
                 </a>
               </div>
             </div>
