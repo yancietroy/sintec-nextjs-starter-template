@@ -18,7 +18,7 @@ const HomeBanner = (props: Props) => {
                 color: '#1a1a1a',
                 letterSpacing: '-0.02em'
               }}>
-                Professional Cleaning Services in Winnipeg
+                Affordable, Professional Cleaning Services in Winnipeg
               </h1>
               <p style={{
                 fontSize: 'clamp(1.1rem, 1.8vw, 1.3rem)',

@@ -4,7 +4,7 @@ import ContactUs from '@/components/ContactUs/ContactUs';
 
 export const metadata = {
   title: 'Contact Us',
-  description: 'Get in touch with Sponge Pro Cleaning Services for a free quote on residential or commercial cleaning in Winnipeg.',
+  description: 'Get in touch with Sponge Pro Cleaning Services for a free quote on affordable residential or commercial cleaning in Winnipeg.',
   alternates: {
     canonical: 'https://www.spongeprocleaningservices.com/contact',
   },

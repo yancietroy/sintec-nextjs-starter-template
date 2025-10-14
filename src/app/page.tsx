@@ -4,12 +4,13 @@ import HomeBanner from '@/components/HomeBanner/HomeBanner';
 import About from '@/components/About/About';
 import Services from '@/components/Services/Services';
 import Stats from '@/components/Stats/Stats';
+import FAQ from '@/components/FAQ/FAQ';
 import ContactSection from '@/components/ContactSection/ContactSection';
 import Footer from '@/components/Footer/Footer';
 
 export const metadata = {
   title: 'Sponge Pro Cleaning Services | Winnipeg Cleaners',
-  description: 'Expert residential & commercial cleaning in Winnipeg, MB. Trusted, reliable service for homes and businesses. Free quotes available today.',
+  description: 'Affordable, expert residential & commercial cleaning in Winnipeg, MB. Trusted, reliable service for homes and businesses. Free quotes available today.',
   alternates: {
     canonical: 'https://www.spongeprocleaningservices.com',
   },
@@ -43,8 +44,8 @@ export default function HomePage() {
       <HomeBanner />
       <About />
       <Services />
-
       <Stats />
+      <FAQ />
       {/* <Testimonials /> */}
       <ContactSection />
       <Footer />

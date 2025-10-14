@@ -6,7 +6,7 @@ import Footer from '@/components/Footer/Footer';
 
 export const metadata = {
   title: 'Our Services',
-  description: 'Discover our comprehensive range of professional cleaning services for residential and commercial properties in Winnipeg.',
+  description: 'Discover our comprehensive range of affordable, professional cleaning services for residential and commercial properties in Winnipeg.',
   alternates: {
     canonical: 'https://www.spongeprocleaningservices.com/services',
   },

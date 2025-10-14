@@ -5,6 +5,7 @@ import '@/styles/globals.css'
 import '@/styles/sintec.css'
 import '@/styles/responsive.css'
 import AOSProvider from '@/components/AOSProvider/AOSProvider'
+import BootstrapClient from '@/components/BootstrapClient/BootstrapClient'
 
 const roboto = Roboto({
   weight: ['400', '700'],
@@ -20,7 +21,7 @@ export const metadata = {
     default: 'Sponge Pro Cleaning Services | Winnipeg Cleaners',
     template: '%s | Sponge Pro Cleaning Services'
   },
-  description: 'Expert residential & commercial cleaning in Winnipeg, MB. Trusted, reliable service for homes and businesses. Free quotes available today.',
+  description: 'Affordable, expert residential & commercial cleaning in Winnipeg, MB. Trusted, reliable service for homes and businesses. Free quotes available today.',
   keywords: ['cleaning services Winnipeg', 'residential cleaning', 'commercial cleaning', 'professional cleaners', 'house cleaning Winnipeg', 'office cleaning', 'move-in cleaning', 'move-out cleaning'],
   authors: [{ name: 'Sponge Pro Cleaning Services' }],
   creator: 'Sponge Pro Cleaning Services',
@@ -33,7 +34,7 @@ export const metadata = {
     url: 'https://www.spongeprocleaningservices.com',
     siteName: 'Sponge Pro Cleaning Services',
     title: 'Sponge Pro Cleaning Services | Winnipeg Cleaners',
-    description: 'Expert residential & commercial cleaning in Winnipeg, MB. Trusted, reliable service for homes and businesses. Free quotes available today.',
+    description: 'Affordable, expert residential & commercial cleaning in Winnipeg, MB. Trusted, reliable service for homes and businesses. Free quotes available today.',
     images: [
       {
         url: 'https://www.spongeprocleaningservices.com/images/og-image.jpg',
@@ -48,7 +49,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Sponge Pro Cleaning Services | Winnipeg Cleaners',
-    description: 'Expert residential & commercial cleaning in Winnipeg, MB. Trusted, reliable service for homes and businesses. Free quotes available today.',
+    description: 'Affordable, expert residential & commercial cleaning in Winnipeg, MB. Trusted, reliable service for homes and businesses. Free quotes available today.',
     images: ['https://www.spongeprocleaningservices.com/images/og-image.jpg'],
   },
 
@@ -167,6 +168,7 @@ export default function RootLayout({
         />
       </head>
       <body className={roboto.className}>
+        <BootstrapClient />
         <AOSProvider>
           {children}
         </AOSProvider>
