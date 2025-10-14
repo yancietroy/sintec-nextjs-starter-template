@@ -9,7 +9,8 @@
       "Bash(npm audit fix:*)",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:docs.web3forms.com)",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "Bash(npm run build)"
     ],
     "deny": [],
     "ask": []

@@ -68,7 +68,7 @@ const FAQ = (props: Props) => {
                 Frequently Asked Questions
               </h3>
               <p style={{ fontSize: '1.1rem', lineHeight: '1.6', color: '#6c757d', maxWidth: '600px', margin: '0 auto' }}>
-                Got questions? We've got answers. Learn more about our cleaning services.
+                Got questions? We&apos;ve got answers. Learn more about our cleaning services.
               </p>
             </div>
 
@@ -120,7 +120,7 @@ const FAQ = (props: Props) => {
                     padding: '20px 24px 24px 24px',
                     backgroundColor: '#ffffff'
                   }}>
-                    We serve all areas of Winnipeg, MB and surrounding communities. Whether you're in the downtown core, suburbs, or nearby neighborhoods, we're happy to provide our cleaning services to your location.
+                    We serve all areas of Winnipeg, MB and surrounding communities. Whether you&apos;re in the downtown core, suburbs, or nearby neighborhoods, we&apos;re happy to provide our cleaning services to your location.
                   </div>
                 </div>
               </div>
@@ -172,7 +172,7 @@ const FAQ = (props: Props) => {
                     padding: '20px 24px 24px 24px',
                     backgroundColor: '#ffffff'
                   }}>
-                    No, you don't need to provide anything! We bring all our own professional-grade cleaning supplies and equipment. However, if you prefer we use specific products or have special requests, we're happy to accommodate.
+                    No, you don&apos;t need to provide anything! We bring all our own professional-grade cleaning supplies and equipment. However, if you prefer we use specific products or have special requests, we&apos;re happy to accommodate.
                   </div>
                 </div>
               </div>
@@ -224,7 +224,7 @@ const FAQ = (props: Props) => {
                     padding: '20px 24px 24px 24px',
                     backgroundColor: '#ffffff'
                   }}>
-                    Getting a quote is easy! You can fill out our contact form, give us a call at <a href="tel:+12042028257" style={{ color: '#1e3a8a', fontWeight: '600', textDecoration: 'none', borderBottom: '2px solid #1e3a8a' }}>+1-204 202 8257</a>, or book a free consultation online. We'll discuss your specific needs and provide a customized quote.
+                    Getting a quote is easy! You can fill out our contact form, give us a call at <a href="tel:+12042028257" style={{ color: '#1e3a8a', fontWeight: '600', textDecoration: 'none', borderBottom: '2px solid #1e3a8a' }}>+1-204 202 8257</a>, or book a free consultation online. We&apos;ll discuss your specific needs and provide a customized quote.
                   </div>
                 </div>
               </div>
@@ -276,7 +276,7 @@ const FAQ = (props: Props) => {
                     padding: '20px 24px 24px 24px',
                     backgroundColor: '#ffffff'
                   }}>
-                    We offer a range of services including standard residential cleaning, move-in/move-out cleaning, commercial/office cleaning, and custom cleaning plans tailored to your specific needs. Whether you need one-time deep cleaning or regular maintenance, we've got you covered.
+                    We offer a range of services including standard residential cleaning, move-in/move-out cleaning, commercial/office cleaning, and custom cleaning plans tailored to your specific needs. Whether you need one-time deep cleaning or regular maintenance, we&apos;ve got you covered.
                   </div>
                 </div>
               </div>
@@ -328,7 +328,7 @@ const FAQ = (props: Props) => {
                     padding: '20px 24px 24px 24px',
                     backgroundColor: '#ffffff'
                   }}>
-                    Very flexible! We understand that life is busy, so we offer scheduling options that work around your lifestyle. We're available Monday through Friday (9 AM - 5 PM) with flexible scheduling on weekends. We can arrange weekly, bi-weekly, monthly cleanings, or one-time services.
+                    Very flexible! We understand that life is busy, so we offer scheduling options that work around your lifestyle. We&apos;re available Monday through Friday (9 AM - 5 PM) with flexible scheduling on weekends. We can arrange weekly, bi-weekly, monthly cleanings, or one-time services.
                   </div>
                 </div>
               </div>
@@ -380,7 +380,7 @@ const FAQ = (props: Props) => {
                     padding: '20px 24px 24px 24px',
                     backgroundColor: '#ffffff'
                   }}>
-                    It's entirely up to you! Many of our clients prefer to be away while we clean, while others like to be present. We're flexible and will work with whatever makes you most comfortable. You can provide us with access instructions that work best for your schedule.
+                    It&apos;s entirely up to you! Many of our clients prefer to be away while we clean, while others like to be present. We&apos;re flexible and will work with whatever makes you most comfortable. You can provide us with access instructions that work best for your schedule.
                   </div>
                 </div>
               </div>
