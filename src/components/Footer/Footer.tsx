@@ -54,7 +54,7 @@ const Footer = (props: Props) => {
             <h5 style={{ fontSize: 'clamp(1rem, 2.5vw, 1.1rem)', fontWeight: '600', marginTop: 'clamp(20px, 4vw, 0px)', marginBottom: 'clamp(12px, 3vw, 20px)', color: '#ffffff' }}>
               Quick Links
             </h5>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 16px', justifyContent: 'center' }} className="justify-content-md-start">
+            <div className="d-flex flex-row flex-wrap flex-md-column gap-2 gap-md-1 justify-content-center justify-content-md-start">
               <Link href="/" className="footer-link" style={{ color: '#e0e7ff', textDecoration: 'none', fontSize: 'clamp(0.85rem, 2vw, 0.9rem)', transition: 'color 0.3s', padding: '8px 0' }}>
                 Home
               </Link>
@@ -96,7 +96,7 @@ const Footer = (props: Props) => {
               {/* Email */}
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
                 <i className="ti-email" style={{ marginTop: '4px', color: '#e0e7ff', fontSize: '1rem' }}></i>
-                <a href="mailto:admin@spongeprocleaningservices.com" className="footer-link" style={{ color: '#e0e7ff', textDecoration: 'none', fontSize: 'clamp(0.85rem, 2vw, 0.9rem)', wordBreak: 'break-word', maxWidth: '200px' }}>
+                <a href="mailto:admin@spongeprocleaningservices.com" className="footer-link" style={{ color: '#e0e7ff', textDecoration: 'none', fontSize: 'clamp(0.85rem, 2vw, 0.9rem)', wordBreak: 'break-word', maxWidth: '280px' }}>
                   admin@spongeprocleaningservices.com
                 </a>
               </div>
