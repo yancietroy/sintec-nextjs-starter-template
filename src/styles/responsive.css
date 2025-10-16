@@ -418,9 +418,8 @@
 	============================================================================================ */
 }
 
-/* Join Us Card and Business Hours Card - Match heights on desktop */
+/* Business Hours Card minimum height on desktop */
 @media (min-width: 992px) {
-	.join-us-card,
 	.business-hours-card {
 		min-height: 350px;
 	}

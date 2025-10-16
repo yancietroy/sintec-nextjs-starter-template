@@ -1,3 +1,14 @@
+/* BBB Badge visibility fix */
+div[id^="bbb"],
+div[id*="BBB"] {
+  z-index: 99999 !important;
+}
+
+/* Allow BBB badge hover interactions */
+div[id^="bbb"] * {
+  pointer-events: auto !important;
+}
+
 /* Container width override - Industry standard 2025 (Bootstrap 5) */
 .container {
   max-width: 1320px !important;

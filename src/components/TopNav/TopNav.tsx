@@ -7,11 +7,16 @@ const TopNav = (props: Props) => {
     <div className="top_menu row m-0">
           <div className="container">
             <div className="float-start">
-              {/* Future social media links when client is ready */}
+              <a className="dn_btn" href="https://www.facebook.com/profile.php?id=61559035156842" target="_blank" rel="noopener noreferrer">
+                <i className="ti-facebook"></i> Follow us on Facebook
+              </a>
             </div>
             <div className="float-end">
               <a className="dn_btn" href="tel:+12042028257">
                 <i className="ti-mobile"></i>+1-204 202 8257
+              </a>
+              <a className="dn_btn" href="tel:+12042028450">
+                <i className="ti-mobile"></i>+1-204 202 8450
               </a>
               <span className="dn_btn">
                 {" "}

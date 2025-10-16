@@ -6,6 +6,7 @@ import '@/styles/sintec.css'
 import '@/styles/responsive.css'
 import AOSProvider from '@/components/AOSProvider/AOSProvider'
 import BootstrapClient from '@/components/BootstrapClient/BootstrapClient'
+import BBBSeal from '@/components/BBBSeal/BBBSeal'
 
 const roboto = Roboto({
   weight: ['400', '700'],
@@ -161,6 +162,8 @@ export default function RootLayout({
         {/* Preconnect to external domains for faster resource loading */}
         <link rel="preconnect" href="https://api.web3forms.com" />
         <link rel="dns-prefetch" href="https://api.web3forms.com" />
+        <link rel="preconnect" href="https://seal-manitoba.bbb.org" />
+        <link rel="dns-prefetch" href="https://seal-manitoba.bbb.org" />
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
@@ -168,10 +171,11 @@ export default function RootLayout({
         />
       </head>
       <body className={roboto.className}>
-        <BootstrapClient />
         <AOSProvider>
           {children}
         </AOSProvider>
+        <BootstrapClient />
+        <BBBSeal />
       </body>
     </html>
   )

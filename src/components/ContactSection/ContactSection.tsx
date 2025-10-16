@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useRef } from "react";
+import { FaBriefcase, FaClock, FaInfoCircle } from 'react-icons/fa';
 
 type Props = {}
 
@@ -44,7 +45,8 @@ const ContactSection = (props: Props) => {
               </p>
               <div className="mt-3">
                 <p style={{ fontSize: '0.95rem', color: '#6c757d', marginBottom: '12px' }}>
-                  Prefer to talk? <a href="tel:+12042028257" style={{ color: '#1e3a8a', fontWeight: '600' }}>Call us at +1-204 202 8257</a> or{' '}
+                  Prefer to talk? Call us at <a href="tel:+12042028257" style={{ color: '#1e3a8a', fontWeight: '600' }}>+1-204 202 8257</a> or{' '}
+                  <a href="tel:+12042028450" style={{ color: '#1e3a8a', fontWeight: '600' }}>+1-204 202 8450</a>, or{' '}
                   <a href="/book" style={{ color: '#1e3a8a', fontWeight: '600' }}>schedule a consultation</a>
                 </p>
               </div>
@@ -140,30 +142,36 @@ const ContactSection = (props: Props) => {
 
           <div className="col-lg-6 offset-lg-1" data-aos="fade-left" suppressHydrationWarning>
             <div className="join-us-card mb-5" style={{
-              padding: '35px',
+              padding: '30px 30px 20px 30px',
               backgroundColor: '#ffffff',
               borderRadius: '16px',
-              border: '2px solid #e5e7eb'
+              border: '2px solid #e5e7eb',
+              display: 'inline-block',
+              width: 'auto',
+              maxWidth: '100%'
             }}>
-              <h3 className="mb-3" style={{ fontSize: '1.75rem', fontWeight: '700', color: '#1e3a8a' }}>
-                <i className="ti-briefcase me-2"></i>Join Us
+              <h3 className="mb-3" style={{ fontSize: '1.5rem', fontWeight: '700', color: '#1e3a8a', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <FaBriefcase />
+                <span>Join Us</span>
               </h3>
-              <p style={{ fontSize: '1.05rem', lineHeight: '1.7', color: '#1a1a1a', marginBottom: '15px', fontWeight: '500' }}>
+              <p style={{ fontSize: '1rem', lineHeight: '1.6', color: '#1a1a1a', marginBottom: '12px', fontWeight: '500' }}>
                 We&apos;re currently expanding our team.
               </p>
-              <p style={{ fontSize: '0.95rem', lineHeight: '1.7', color: '#6c757d', marginBottom: '25px' }}>
+              <p style={{ fontSize: '0.9rem', lineHeight: '1.6', color: '#6c757d', marginBottom: '15px' }}>
                 Interested in joining us? Learn more about our process and flexible scheduling.
               </p>
               <a href="/apply" className="btn btn-md hero-btn-primary" style={{
-                padding: '12px 28px'
+                padding: '12px 28px',
+                display: 'inline-block'
               }}>
                 Apply Now
               </a>
             </div>
 
             <div className="business-hours-card">
-              <h3 className="mb-4">
-                <i className="ti-time me-2"></i>Business Hours
+              <h3 className="mb-4" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <FaClock />
+                <span>Business Hours</span>
               </h3>
               <div className="hours-list">
                 <div className="single-hour d-flex justify-content-between align-items-center">
@@ -176,12 +184,35 @@ const ContactSection = (props: Props) => {
                 </div>
               </div>
               <div className="hours-note mt-4">
-                <p>
-                  <i className="ti-info-alt"></i>
-                  We offer flexible scheduling options on weekends to accommodate your busy lifestyle.
+                <p style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <FaInfoCircle />
+                  <span>We offer flexible scheduling options on weekends to accommodate your busy lifestyle.</span>
                 </p>
               </div>
             </div>
+
+            {/* BBB Get Quote Badge - Commented out to avoid confusion with main contact form */}
+            {/* <div className="mt-4 text-center" style={{
+              backgroundColor: '#f8f9fa',
+              borderRadius: '12px',
+              border: '1px solid #e5e7eb',
+              padding: '20px'
+            }}>
+              <h4 style={{ fontSize: '1rem', fontWeight: '600', color: '#1e3a8a', marginBottom: '15px' }}>
+                Request a Quote via BBB
+              </h4>
+              <a
+                href="https://www.bbb.org/centralcanada/quote/request-sponge-pro-cleaning-services-1000007944/#buttonclick"
+                target="_blank"
+                rel="nofollow"
+              >
+                <img
+                  src="https://seal-manitoba.bbb.org/request-a-quote/blue-badge-160-51-blue-bbb-1000007944.png"
+                  style={{ border: 0, maxWidth: '100%', height: 'auto' }}
+                  alt="Sponge Pro Cleaning Services BBB Business Review"
+                />
+              </a>
+            </div> */}
           </div>
         </div>
       </div>

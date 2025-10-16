@@ -156,6 +156,9 @@ const ContactUs = (props: Props) => {
                 <h3>
                   <a href="tel:+12042028257">+1-204 202 8257</a>
                 </h3>
+                <h3>
+                  <a href="tel:+12042028450">+1-204 202 8450</a>
+                </h3>
                 <p>Call us for immediate assistance</p>
               </div>
             </div>
@@ -193,6 +196,29 @@ const ContactUs = (props: Props) => {
               </div>
             </div>
 
+            {/* BBB Get Quote Badge - Commented out to avoid confusion with main contact form */}
+            {/* <div className="mt-4 text-center" style={{
+              backgroundColor: '#f8f9fa',
+              borderRadius: '12px',
+              border: '1px solid #e5e7eb',
+              padding: '20px'
+            }}>
+              <h4 style={{ fontSize: '1rem', fontWeight: '600', color: '#1e3a8a', marginBottom: '15px' }}>
+                Request a Quote via BBB
+              </h4>
+              <a
+                href="https://www.bbb.org/centralcanada/quote/request-sponge-pro-cleaning-services-1000007944/#buttonclick"
+                target="_blank"
+                rel="nofollow"
+              >
+                <img
+                  src="https://seal-manitoba.bbb.org/request-a-quote/blue-badge-160-51-blue-bbb-1000007944.png"
+                  style={{ border: 0, maxWidth: '100%', height: 'auto' }}
+                  alt="Sponge Pro Cleaning Services BBB Business Review"
+                />
+              </a>
+            </div> */}
+
           </div>
         </div>
 
@@ -213,27 +239,43 @@ const ContactUs = (props: Props) => {
             ></iframe>
           </div>
           <div className="col-lg-4">
+            {/* BBB Customer Review Badge */}
+            <div className="mb-4 text-center">
+              <a
+                href="https://www.bbb.org/centralcanada/customer-reviews/cleaning-services/sponge-pro-cleaning-services-in-winnipeg-mb-1000007944/add/"
+                target="_blank"
+                rel="nofollow"
+              >
+                <img
+                  src="https://seal-manitoba.bbb.org/customer-reviews/badge-4-bbb-1000007944.png"
+                  style={{ border: 0, maxWidth: '100%', height: 'auto' }}
+                  alt="Sponge Pro Cleaning Services BBB Business Review"
+                />
+              </a>
+            </div>
+
             <div className="join-us-card" style={{
-              padding: '35px',
+              padding: '30px 30px 20px 30px',
               backgroundColor: '#ffffff',
               borderRadius: '16px',
               border: '2px solid #e5e7eb',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center'
+              display: 'inline-block',
+              width: 'auto',
+              maxWidth: '100%'
             }}>
-              <h3 className="mb-3" style={{ fontSize: '1.75rem', fontWeight: '700', color: '#1e3a8a', display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <h3 className="mb-3" style={{ fontSize: '1.5rem', fontWeight: '700', color: '#1e3a8a', display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <FaBriefcase />
                 <span>Join Us</span>
               </h3>
-              <p style={{ fontSize: '1.05rem', lineHeight: '1.7', color: '#1a1a1a', marginBottom: '15px', fontWeight: '500' }}>
+              <p style={{ fontSize: '1rem', lineHeight: '1.6', color: '#1a1a1a', marginBottom: '12px', fontWeight: '500' }}>
                 We&apos;re currently expanding our team.
               </p>
-              <p style={{ fontSize: '0.95rem', lineHeight: '1.7', color: '#6c757d', marginBottom: '25px' }}>
+              <p style={{ fontSize: '0.9rem', lineHeight: '1.6', color: '#6c757d', marginBottom: '15px' }}>
                 Interested in joining us? Learn more about our process and flexible scheduling.
               </p>
               <a href="/apply" className="btn btn-md hero-btn-primary" style={{
-                padding: '12px 28px'
+                padding: '12px 28px',
+                display: 'inline-block'
               }}>
                 Apply Now
               </a>

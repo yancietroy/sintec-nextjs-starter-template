@@ -1,0 +1,15 @@
+/* BBB Badge Custom Styling - Updated 2025 */
+/* Target any BBB badge container */
+body > div[style*="position: fixed"],
+body > div[style*="position:fixed"] {
+  z-index: 99999 !important;
+}
+
+/* Add spacing if badge is too tight */
+body > div[style*="bottom: 0"] {
+  bottom: 20px !important;
+}
+
+body > div[style*="right: 0"] {
+  right: 20px !important;
+}
