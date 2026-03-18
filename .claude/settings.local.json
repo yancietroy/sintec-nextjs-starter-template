@@ -12,7 +12,10 @@
       "Bash(npx tsc:*)",
       "Bash(npm run build)",
       "WebFetch(domain:seal-manitoba.bbb.org)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(python3:*)",
+      "WebFetch(domain:www.spongeprocleaningservices.com)",
+      "Skill(audit-website)"
     ],
     "deny": [],
     "ask": []

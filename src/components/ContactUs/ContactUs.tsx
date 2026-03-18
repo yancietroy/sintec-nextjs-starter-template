@@ -37,7 +37,7 @@ const ContactUs = (props: Props) => {
       <div className="container">
         <div className="row">
           <div className="col-12 text-center mb-4">
-            <h2 className="contact-title" style={{ fontSize: 'clamp(2rem, 4vw, 2.5rem)', marginBottom: '20px' }}>Contact Us</h2>
+            <h1 className="contact-title" style={{ fontSize: 'clamp(2rem, 4vw, 2.5rem)', marginBottom: '20px' }}>Contact Us</h1>
             <p style={{ fontSize: '1.1rem', lineHeight: '1.7', color: '#6c757d', maxWidth: '700px', margin: '0 auto' }}>
               Send us a message for quotes or inquiries.
             </p>

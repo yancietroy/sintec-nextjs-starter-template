@@ -1,24 +1,26 @@
 import Image from 'next/image'
 import React from 'react'
 
-type Props = {}
+type Props = {
+  headingAs?: 'h1' | 'h2' | 'h3'
+}
 
-const Services = (props: Props) => {
+const Services = ({ headingAs: Tag = 'h3' }: Props) => {
   return (
     <section className="service-area area-padding" style={{ backgroundColor: '#ffffff' }}>
         <div className="container">
           <div className="area-heading" data-aos="fade-up" suppressHydrationWarning>
-            <h3 className="line" style={{ fontSize: 'clamp(2rem, 4vw, 2.5rem)', marginBottom: '20px' }}>Our Cleaning Services</h3>
+            <Tag className="line" style={{ fontSize: 'clamp(2rem, 4vw, 2.5rem)', marginBottom: '20px' }}>Our Cleaning Services</Tag>
             <p style={{ fontSize: '1.2rem', lineHeight: '1.6' }}>Professional cleaning solutions tailored to meet your specific needs and schedule.</p>
           </div>
           <div className="row">
-            <div className="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="100" suppressHydrationWarning>
+            <div className="col-md-6 col-xl-6" data-aos="fade-up" data-aos-delay="100" suppressHydrationWarning>
               <div className="single-service" style={{ border: '1px solid #e5e7eb', borderRadius: '16px' }}>
                 <div className="service-icon">
                   <Image
                     width={120}
                     height={120}
-                    src="/images/reshot-icon-cleaning-cart-9PC5ZHTVL3.svg"
+                    src="/images/standard-cleaning-icon.svg"
                     alt="Standard Cleaning"
                     loading="lazy"
                   />
@@ -34,15 +36,14 @@ const Services = (props: Props) => {
               </div>
             </div>
 
-            <div className="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="200" suppressHydrationWarning>
+            <div className="col-md-6 col-xl-6" data-aos="fade-up" data-aos-delay="200" suppressHydrationWarning>
               <div className="single-service" style={{ border: '1px solid #e5e7eb', borderRadius: '16px' }}>
                 <div className="service-icon">
                   <Image
-                    width={92}
-                    height={92}
-                    src="/images/reshot-icon-cleaning-home-YFKCR4BTAP.svg"
+                    width={120}
+                    height={120}
+                    src="/images/move-cleaning-icon.svg"
                     alt="Move-In/Move-Out Cleaning"
-                    style={{ marginTop: '20px' }}
                     loading="lazy"
                   />
                 </div>
@@ -57,13 +58,13 @@ const Services = (props: Props) => {
               </div>
             </div>
 
-            <div className="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="300" suppressHydrationWarning>
+            <div className="col-md-6 col-xl-6" data-aos="fade-up" data-aos-delay="300" suppressHydrationWarning>
               <div className="single-service" style={{ border: '1px solid #e5e7eb', borderRadius: '16px' }}>
                 <div className="service-icon">
                   <Image
                     width={120}
                     height={120}
-                    src="/images/reshot-icon-cleaning-products-AMY9VLJQNG.svg"
+                    src="/images/custom-cleaning-icon.svg"
                     alt="Custom Cleaning Plans"
                     loading="lazy"
                   />
@@ -74,6 +75,28 @@ const Services = (props: Props) => {
                     Tailored cleaning plans to meet your specific needs, including
                     customized frequency and areas of focus. We adapt our services
                     to fit your lifestyle and preferences.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-6 col-xl-6" data-aos="fade-up" data-aos-delay="400" suppressHydrationWarning>
+              <div className="single-service" style={{ border: '1px solid #e5e7eb', borderRadius: '16px' }}>
+                <div className="service-icon">
+                  <Image
+                    width={120}
+                    height={120}
+                    src="/images/junk-removal-icon.svg"
+                    alt="Junk Removal"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="service-content">
+                  <h5>Junk Removal</h5>
+                  <p>
+                    Fast and reliable junk removal services for homes and offices.
+                    We haul away old furniture, appliances, yard debris, and other
+                    unwanted items so you don&apos;t have to.
                   </p>
                 </div>
               </div>

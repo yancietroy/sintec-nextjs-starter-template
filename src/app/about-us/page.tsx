@@ -37,7 +37,7 @@ export default function AboutPage() {
   return (
     <>
       <Header />
-      <About />
+      <About headingAs="h1" />
       <Services />
       {/* <Testimonials /> */}
       <Footer />

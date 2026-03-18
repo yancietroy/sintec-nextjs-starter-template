@@ -4,6 +4,43 @@ import React from 'react';
 
 type Props = {}
 
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What areas do you serve in Winnipeg?',
+      acceptedAnswer: { '@type': 'Answer', text: 'We serve all areas of Winnipeg, MB and surrounding communities. Whether you\'re in the downtown core, suburbs, or nearby neighborhoods, we\'re happy to provide our cleaning services to your location.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need to provide cleaning supplies?',
+      acceptedAnswer: { '@type': 'Answer', text: 'No, you don\'t need to provide anything! We bring all our own professional-grade cleaning supplies and equipment. However, if you prefer we use specific products or have special requests, we\'re happy to accommodate.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I get a quote for cleaning services?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Getting a quote is easy! You can fill out our contact form, give us a call at +1-204 202 8257, or book a free consultation online. We\'ll discuss your specific needs and provide a customized quote.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What types of cleaning services do you offer?',
+      acceptedAnswer: { '@type': 'Answer', text: 'We offer a range of services including standard residential cleaning, move-in/move-out cleaning, commercial/office cleaning, and custom cleaning plans tailored to your specific needs. Whether you need one-time deep cleaning or regular maintenance, we\'ve got you covered.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How flexible is your scheduling?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Very flexible! We understand that life is busy, so we offer scheduling options that work around your lifestyle. We\'re available Monday through Friday (9 AM - 5 PM) with flexible scheduling on weekends. We can arrange weekly, bi-weekly, monthly cleanings, or one-time services.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need to be home during the cleaning?',
+      acceptedAnswer: { '@type': 'Answer', text: 'It\'s entirely up to you! Many of our clients prefer to be away while we clean, while others like to be present. We\'re flexible and will work with whatever makes you most comfortable. You can provide us with access instructions that work best for your schedule.' },
+    },
+  ],
+}
+
 const FAQ = (props: Props) => {
   return (
     <section className="faq-section" style={{
@@ -12,6 +49,10 @@ const FAQ = (props: Props) => {
       overflow: 'hidden',
       padding: '80px 0'
     }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       {/* Decorative background elements */}
       <div style={{
         position: 'absolute',

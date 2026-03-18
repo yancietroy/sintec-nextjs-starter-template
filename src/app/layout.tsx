@@ -23,7 +23,7 @@ export const metadata = {
     template: '%s | Sponge Pro Cleaning Services'
   },
   description: 'Affordable, expert residential & commercial cleaning in Winnipeg, MB. Trusted, reliable service for homes and businesses. Free quotes available today.',
-  keywords: ['cleaning services Winnipeg', 'residential cleaning', 'commercial cleaning', 'professional cleaners', 'house cleaning Winnipeg', 'office cleaning', 'move-in cleaning', 'move-out cleaning'],
+  keywords: ['cleaning services Winnipeg', 'residential cleaning', 'commercial cleaning', 'professional cleaners', 'house cleaning Winnipeg', 'office cleaning', 'move-in cleaning', 'move-out cleaning', 'junk removal Winnipeg'],
   authors: [{ name: 'Sponge Pro Cleaning Services' }],
   creator: 'Sponge Pro Cleaning Services',
   publisher: 'Sponge Pro Cleaning Services',
@@ -104,7 +104,7 @@ export default function RootLayout({
     priceRange: '$$',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Winnipeg',
+      streetAddress: '',
       addressLocality: 'Winnipeg',
       addressRegion: 'MB',
       postalCode: 'R3G 2H5',
@@ -152,7 +152,8 @@ export default function RootLayout({
       'Commercial Cleaning',
       'Move-In/Move-Out Cleaning',
       'Office Cleaning',
-      'House Cleaning'
+      'House Cleaning',
+      'Junk Removal'
     ]
   }
 

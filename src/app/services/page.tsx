@@ -34,10 +34,69 @@ export const metadata = {
 export const dynamic = 'force-static'
 
 export default function ServicesPage() {
+  const servicesJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: [
+      {
+        '@type': 'Service',
+        position: 1,
+        name: 'Standard Cleaning',
+        description: 'Regular cleaning services including dusting, vacuuming, mopping, bathroom and kitchen cleaning, and surface sanitization.',
+        provider: {
+          '@type': 'LocalBusiness',
+          name: 'Sponge Pro Cleaning Services',
+        },
+        areaServed: { '@type': 'City', name: 'Winnipeg' },
+        serviceType: 'Residential Cleaning',
+      },
+      {
+        '@type': 'Service',
+        position: 2,
+        name: 'Move-In/Move-Out Cleaning',
+        description: 'Specialized cleaning to ensure homes are spotless and ready for new occupants or in pristine condition for the next tenant.',
+        provider: {
+          '@type': 'LocalBusiness',
+          name: 'Sponge Pro Cleaning Services',
+        },
+        areaServed: { '@type': 'City', name: 'Winnipeg' },
+        serviceType: 'Move-In/Move-Out Cleaning',
+      },
+      {
+        '@type': 'Service',
+        position: 3,
+        name: 'Custom Cleaning Plans',
+        description: 'Tailored cleaning plans with customized frequency and areas of focus, adapted to your lifestyle and preferences.',
+        provider: {
+          '@type': 'LocalBusiness',
+          name: 'Sponge Pro Cleaning Services',
+        },
+        areaServed: { '@type': 'City', name: 'Winnipeg' },
+        serviceType: 'Custom Cleaning',
+      },
+      {
+        '@type': 'Service',
+        position: 4,
+        name: 'Junk Removal',
+        description: 'Fast and reliable junk removal for homes and offices — old furniture, appliances, yard debris, and other unwanted items.',
+        provider: {
+          '@type': 'LocalBusiness',
+          name: 'Sponge Pro Cleaning Services',
+        },
+        areaServed: { '@type': 'City', name: 'Winnipeg' },
+        serviceType: 'Junk Removal',
+      },
+    ],
+  }
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
+      />
       <Header />
-      <Services />
+      <Services headingAs="h1" />
       <Stats />
       {/* <Testimonials /> */}
       <Footer />

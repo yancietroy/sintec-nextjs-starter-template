@@ -6,5 +6,27 @@ Allow: /
 Disallow: /api/
 Disallow: /privacy-policy
 
+# AI Search Engine Bots - explicitly allowed for GEO visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 # Sitemap
 Sitemap: https://www.spongeprocleaningservices.com/sitemap.xml
