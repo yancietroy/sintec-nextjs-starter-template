@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- House outline -->
+  <path d="M15 55 L60 20 L105 55" fill="none" stroke="#2d2d2d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="22" y="55" width="76" height="45" rx="2" fill="#f3f4f6" stroke="#2d2d2d" stroke-width="2"/>
+  <!-- Door -->
+  <rect x="48" y="68" width="24" height="32" rx="2" fill="#3b82f6" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="66" cy="85" r="2" fill="#f59e0b"/>
+  <!-- Window left -->
+  <rect x="28" y="62" width="14" height="14" rx="1" fill="#a8d8ea" stroke="#2d2d2d" stroke-width="1.5"/>
+  <line x1="35" y1="62" x2="35" y2="76" stroke="#2d2d2d" stroke-width="1"/>
+  <line x1="28" y1="69" x2="42" y2="69" stroke="#2d2d2d" stroke-width="1"/>
+  <!-- Window right -->
+  <rect x="78" y="62" width="14" height="14" rx="1" fill="#a8d8ea" stroke="#2d2d2d" stroke-width="1.5"/>
+  <line x1="85" y1="62" x2="85" y2="76" stroke="#2d2d2d" stroke-width="1"/>
+  <line x1="78" y1="69" x2="92" y2="69" stroke="#2d2d2d" stroke-width="1"/>
+  <!-- Moving boxes -->
+  <rect x="5" y="78" width="16" height="14" rx="2" fill="#f59e0b" stroke="#d97706" stroke-width="1.5"/>
+  <line x1="9" y1="85" x2="17" y2="85" stroke="#d97706" stroke-width="1"/>
+  <rect x="1" y="68" width="14" height="12" rx="2" fill="#10b981" stroke="#059669" stroke-width="1.5"/>
+  <line x1="5" y1="74" x2="11" y2="74" stroke="#059669" stroke-width="1"/>
+  <!-- Sparkles indicating clean -->
+  <path d="M90 30 L92 24 L94 30 L100 32 L94 34 L92 40 L90 34 L84 32 Z" fill="#3b82f6" opacity="0.7"/>
+  <path d="M30 32 L31 28 L32 32 L36 33 L32 34 L31 38 L30 34 L26 33 Z" fill="#3b82f6" opacity="0.5"/>
+  <!-- Broom -->
+  <line x1="100" y1="50" x2="108" y2="95" stroke="#374151" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M104 88 Q108 95 112 88 Q108 100 104 88 Z" fill="#d97706" stroke="#b45309" stroke-width="1"/>
+  <path d="M106 90 Q108 95 110 90 Q108 98 106 90 Z" fill="#f59e0b" stroke="#d97706" stroke-width="0.5"/>
+</svg>
