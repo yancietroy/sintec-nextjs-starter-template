@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { FaFacebook } from 'react-icons/fa'
+import { FaFacebook, FaGoogle } from 'react-icons/fa'
 
 type Props = {}
 
@@ -165,6 +165,24 @@ const Footer = (props: Props) => {
               >
                 <FaFacebook style={{ fontSize: '1.2rem', color: '#ffffff' }} />
                 Follow us on Facebook
+              </a>
+              <br />
+              <a
+                href="https://search.google.com/local/writereview?placeid=ChIJAAAAAAAAAAAR5xSqKAt-rEc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-link d-inline-flex"
+                style={{
+                  color: '#e0e7ff',
+                  textDecoration: 'none',
+                  fontSize: 'clamp(0.85rem, 2vw, 0.9rem)',
+                  alignItems: 'center',
+                  gap: '8px',
+                  minHeight: '44px'
+                }}
+              >
+                <FaGoogle style={{ fontSize: '1.2rem', color: '#ffffff' }} />
+                Leave us a Google Review
               </a>
             </div>
 

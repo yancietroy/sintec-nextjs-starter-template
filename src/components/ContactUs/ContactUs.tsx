@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useRef } from "react";
-import { FaHome, FaTabletAlt, FaEnvelope, FaBriefcase, FaInfoCircle } from 'react-icons/fa';
+import { FaHome, FaTabletAlt, FaEnvelope, FaBriefcase, FaInfoCircle, FaGoogle } from 'react-icons/fa';
 
 type Props = {};
 
@@ -239,7 +239,7 @@ const ContactUs = (props: Props) => {
             ></iframe>
           </div>
           <div className="col-lg-4">
-            {/* BBB Customer Review Badge */}
+            {/* Review Badges */}
             <div className="mb-4 text-center">
               <a
                 href="https://www.bbb.org/centralcanada/customer-reviews/cleaning-services/sponge-pro-cleaning-services-in-winnipeg-mb-1000007944/add/"
@@ -251,6 +251,30 @@ const ContactUs = (props: Props) => {
                   style={{ border: 0, maxWidth: '100%', height: 'auto' }}
                   alt="Sponge Pro Cleaning Services BBB Business Review"
                 />
+              </a>
+            </div>
+
+            <div className="mb-4 text-center">
+              <a
+                href="https://search.google.com/local/writereview?placeid=ChIJAAAAAAAAAAAR5xSqKAt-rEc"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '10px',
+                  padding: '12px 24px',
+                  backgroundColor: '#1e3a8a',
+                  color: '#ffffff',
+                  borderRadius: '8px',
+                  textDecoration: 'none',
+                  fontWeight: '600',
+                  fontSize: '0.95rem',
+                  transition: 'background-color 0.3s'
+                }}
+              >
+                <FaGoogle style={{ fontSize: '1.2rem' }} />
+                Leave us a Google Review
               </a>
             </div>
 
